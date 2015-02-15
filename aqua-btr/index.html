@@ -20,6 +20,8 @@
     <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
     
+    <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+    
     <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>-->
     <!-- <script type="text/javascript" src="bootstrap/js/respond.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -30,6 +32,8 @@
 
   <body>
     <div id="bgImage">
+    
+	
     
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -65,8 +69,29 @@
 
     <div class="container" id="mainBody">
 
+	 <header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+				<li></li><li></li><li></li>
+			</ul>
+			<h1>BlackTip Reef</h1>
+		</header>
+		
+			<nav class="slide">
+			<ul>
+				<li><a href="../trunk.html" class="active">HOME</a></li>
+				<li><a href="#">LINK TWO</a></li>
+				<li><a href="#">LINK THREE</a></li>
+				<li><a href="#">LINK FOUR</a></li>
+				<li><a href="#">LINK FIVE</a></li>
+				<li><a href="#">LINK SIX</a></li>
+				<li><a href="#">LINK SEVEN</a></li>
+			</ul>
+		</nav>
+    
+
+	<div class="content slide">
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
+      <div class="jumbotron visible-lg">
         <h1>Welcome to Blacktip Reef!</h1>
         <p>Please select a group of fish below to view more information on those fish. Tapping on the fish will toggle information about that fish.</p>
         <p>You can swipe to change fish, or tap to display buttons and more options.</p>
@@ -137,8 +162,11 @@
         	
         </footer>
       </div>
+      
+	</div> <!-- content slide-->
+	 </div> <!-- /container -->
 
-    </div> <!-- /container -->
+
 </div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
