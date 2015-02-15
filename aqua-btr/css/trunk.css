@@ -22,7 +22,6 @@ a {text-decoration: none;}
 
 .container {
 	overflow: hidden;
-	background-color: #000;
 
 /*  Prevents Flickering  */
 	-webkit-backface-visibility: hidden;
@@ -31,15 +30,11 @@ a {text-decoration: none;}
 }
 
 
-
-
 header {
 	height: 60px;
 	position: relative;
-	background-color: #f3f5f6;
 }
 header h1 {
-	color: #9aa6af;
 	text-align: left;
 	font-size: 27px;
 	line-height: 60px;
