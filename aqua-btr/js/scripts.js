@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('.center').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 2,
         arrows: true
