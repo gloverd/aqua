@@ -1,4 +1,4 @@
-/*body {
+*body {
 	background-color: #000;
 	
 	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -18,7 +18,7 @@
 	-ms-font-smoothing: antialiased;
 }
 a {text-decoration: none;}
-*/
+
 
 .container {
 	overflow: hidden;
