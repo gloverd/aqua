@@ -92,6 +92,8 @@ header h1 { margin-top:0px; margin-bottom:0px;}
 ul.responsive {margin-bottom: 0px;}
 .pageContainer div.content.slide {max-width: 1200px; margin-left: auto; margin-right: auto;}
 
+.footer-section { margin-top:20px;}
+
 .bgImage {
    position:static;
    height:100%;
