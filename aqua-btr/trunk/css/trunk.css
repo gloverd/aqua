@@ -27,16 +27,6 @@ a {text-decoration: none;}
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
-	
-position:static;
-   height:100%;
-   width:100%;
-  background: url(http://aqua.org/~/media/Images/Home%20Page%20-%201300x540/dolphin/Main_Carousel_Homepage1_1300x540_11811-middle.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin-bottom:-40px;
 }
 
 header {
@@ -100,9 +90,19 @@ li.body-section p a.btn { display: inherit;}
 header h1 { margin-top:0px; margin-bottom:0px;}
 .jumbotron {padding: 20px 40px !important; margin-bottom:0px !important;}
 ul.responsive {margin-bottom: 0px;}
-
-
 .pageContainer div.content.slide {max-width: 1200px; margin-left: auto; margin-right: auto;}
+
+.bgImage {
+   position:static;
+   height:100%;
+   width:100%;
+  background: url(http://aqua.org/~/media/Images/Home%20Page%20-%201300x540/dolphin/Main_Carousel_Homepage1_1300x540_11811-middle.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom:-40px;
+}
 
 
 /* endding of my tomfoolery */
