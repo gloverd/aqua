@@ -13,26 +13,26 @@ $(function() {
     var items = $('.slide');
     var content = $('.content');
 
-    function open() {
-        $(items).removeClass('close').addClass('open');
+    function trunkOpen() {
+        $(items).removeClass('trunkClose').addClass('trunkOpen');
     }
 
-    function close() {
-        $(items).removeClass('open').addClass('close');
+    function trunkClose() {
+        $(items).removeClass('trunkOpen').addClass('trunkClose');
     }
 
     $('#navToggle').on(clickevent, function(event) {
         event.stopPropagation();
         event.preventDefault();
-        if (content.hasClass('open')) {
-            close();
+        if (content.hasClass('trunkOpen')) {
+            trunkClose();
         } else {
-            open();
+            trunkOpen();
         }
     });
     content.click(function() {
-        if (content.hasClass('open')) {
-            close();
+        if (content.hasClass('trunkOpen')) {
+            trunkClose();
         }
     });
 
