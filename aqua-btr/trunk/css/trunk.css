@@ -91,7 +91,7 @@ nav li a:hover {color: #000;}
 /*david's edit*/
 li.body-section p a.btn { display: inherit;}
 .header h1 { margin-top:0px; margin-bottom:0px;}
-jumbotron {padding: 20px 40px !important; margin-bottom:0px !important;}
+.jumbotron {padding: 20px 40px !important; margin-bottom:0px !important;}
 
 .header-section,
 .body-section,
