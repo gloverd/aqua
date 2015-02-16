@@ -62,7 +62,7 @@ header h1 {
 	border-radius: 3px;
 	margin: 5px 0;
 }
-.burger.open li {background-color: #d9dde1;}
+.burger.trunkOpen li {background-color: #d9dde1;}
 
 nav {
 	position: absolute;
@@ -201,8 +201,8 @@ nav {
 	transform: translate3d(5%,0,0)scale(.97);
 }
 
-/*Nav Expanding Open Effect*/
-nav.open {
+/*Nav Expanding trunkOpen Effect*/
+nav.trunkOpen {
 	opacity: 1;
 
 	-webkit-transform: translate3d(0,0,0)scale(1);
@@ -233,8 +233,8 @@ nav.open {
 				transform: translate3d(0,0,0)scale(1);}
 }
 
-/*Nav Shrinking Closed Effect*/
-nav.close {
+/*Nav Shrinking trunkClosed Effect*/
+nav.trunkClose {
 	opacity: 0;
 	
 	-webkit-transform: translate3d(5%,0,0)scale(.97);
@@ -276,57 +276,57 @@ nav.close {
 	z-index: 1;
 }
 
-/*Content Sliding Open Effect*/
-header.open,
-.content.open 
+/*Content Sliding trunkOpen Effect*/
+header.trunkOpen,
+.content.trunkOpen 
 {   
 	-webkit-transform: translate3d(240px,0,0);
-	-webkit-animation: open .5s ease-in-out;
+	-webkit-animation: trunkOpen .5s ease-in-out;
 	
 	-moz-transform: translate3d(240px,0,0);
-	-moz-animation: open .5s ease-in-out;
+	-moz-animation: trunkOpen .5s ease-in-out;
 	
 	transform: translate3d(240px,0,0);
-	animation: open .5s ease-in-out;
+	animation: trunkOpen .5s ease-in-out;
 }
-@-webkit-keyframes open {
+@-webkit-keyframes trunkOpen {
 	0%      {-webkit-transform: translate3d(0,0,0);}
 	70%    {-webkit-transform: translate3d(260px,0,0);}
 	100%  {-webkit-transform: translate3d(240px,0,0);}
 }
-@-moz-keyframes open {
+@-moz-keyframes trunkOpen {
 	0%      {-moz-transform: translate3d(0,0,0);}
 	70%    {-moz-transform: translate3d(260px,0,0);}
 	100%  {-moz-transform: translate3d(240px,0,0);}
 }
-@keyframes open {
+@keyframes trunkOpen {
 	0%      {transform: translate3d(0,0,0);}
 	70%    {transform: translate3d(260px,0,0);}
 	100%  {transform: translate3d(240px,0,0);}
 }
 
-/*Content Sliding Closed Effect*/
-header.close,
-.content.close 
+/*Content Sliding trunkClosed Effect*/
+header.trunkClose,
+.content.trunkClose 
 {
 	-webkit-transform: translate3d(0,0,0);
-	-webkit-animation: close .3s ease-in-out;
+	-webkit-animation: trunkClose .3s ease-in-out;
 	
 	-moz-transform: translate3d(0,0,0);
-	-moz-animation: close .3s ease-in-out;
+	-moz-animation: trunkClose .3s ease-in-out;
 	
 	transform: translate3d(0,0,0);
-	animation: close .3s ease-in-out;
+	animation: trunkClose .3s ease-in-out;
 }
-@-webkit-keyframes close {
+@-webkit-keyframes trunkClose {
 	0%      {-webkit-transform: translate3d(240px,0,0);}
 	100%  {-webkit-transform: translate3d(0,0,0);}
 }
-@-moz-keyframes close {
+@-moz-keyframes trunkClose {
 	0%       {-moz-transform: translate3d(240px,0,0);}
 	100%  {-moz-transform: translate3d(0,0,0);}
 }
-@keyframes close {
+@keyframes trunkClose {
 	0%       {transform: translate3d(240px,0,0);}
 	100%  {transform: translate3d(0,0,0);}
 }
