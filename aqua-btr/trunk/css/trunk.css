@@ -112,8 +112,8 @@ ul.responsive {margin-bottom: 0px;}
 .footer-section 
 {padding: 20px;}
 
-.header-section {background-color: #ffffff;}
-.body-section {background-color: #f4f5f6;}
+.header-section {/*background-color: #ffffff;*/}
+.body-section {/*background-color: #f4f5f6;*/ background-color: rgba(244, 245, 246, 0.5);}
 .footer-section {background-color: #dadee1;}
 .placefiller {
 	text-align: center;
