@@ -120,8 +120,8 @@ li.body-section p a.btn { display: inherit;}
 
 @media only screen and (max-width: 780px) {
 
-/*david's edit
-li.body-section p a.btn { display: inherit;line-height: 3; }*/
+/*david's edit */
+li.body-section p a.btn {line-height: 3; }
 
 
 
