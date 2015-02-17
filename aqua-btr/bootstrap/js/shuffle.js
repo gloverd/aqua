@@ -2,17 +2,19 @@
 
 	  
 $(document).ready(function() {
-	    $('.center').slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 2,
-        arrows: true
-    });
+//    $('.center').slick({
+  //      dots: false,
+    //    infinite: true,
+     //   slidesToShow: 2,
+      //  arrows: true
+ //   });
 });
 
 function shuffle () {
+   // $('.center').slick('unslick');
+
     $('.col-lg-4').shuffle();
-        $('.center').slick('unslick');
+
     $('.center').slick({
         dots: false,
         infinite: true,
