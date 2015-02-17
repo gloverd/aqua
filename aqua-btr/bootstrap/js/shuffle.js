@@ -20,3 +20,16 @@ function shuffle () {
         arrows: true
     });
 }
+
+jQuery('.unslickBtn').click(function() {
+    jQuery('.center').unslick();
+    jQuery('.button-append').append('<p>unslick clicked</p>');
+});
+jQuery('.slickBtn').click(function() {
+    jQuery('.center').slick({
+    centerMode: true,
+    centerPadding: '100px',
+    dots: true
+});
+    jQuery('.button-append').append('<p>slick clicked</p>');
+});
