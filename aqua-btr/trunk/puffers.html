@@ -23,16 +23,22 @@
 </script>
 
 <script type="text/javascript">
-	$('.make2').click(function(){ 
-	    //if ( $('.row div').hasClass('col-lg-3') ) {
-	    $('.row div').removeClass('col-lg-3');
-	    $('.row div').addClass('col-lg-6'); 
-	    //}
-	})
-	$('.make4').click(function(){ 
-	    $('.row div').removeClass('col-lg-6');
-	    $('.row div').addClass('col-lg-3'); 
-	})
+
+$('.make2').click(function(){ 
+    if ( $('.row div').hasClass('col-sm-3') ) {
+    $('.row div').removeClass('col-sm-3');
+    $('.row div').addClass('col-sm-6'); 
+    }
+})
+
+
+$('.make4').click(function(){ 
+    if ( $('.row div').hasClass('col-sm-6') ) {
+    $('.row div').removeClass('col-sm-6');
+    $('.row div').addClass('col-sm-3'); 
+      // do more stuff.
+    }
+})
 </script>
 
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
@@ -92,21 +98,19 @@
 				        <a class="btn btn-warning btn-large " href="#"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="padding-right: 15px;"></span>Fullscreen</a>
 				        <a class="btn btn-danger btn-large " href="#"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
 			        </p>
+			        <p><a class="btn make2 btn-lg btn-primary" href="#fork">Make 2 column</a></p>
+        			 <p><a class="btn make4 btn-lg btn-primary" href="#fork">Make 4 column</a></p>
 			</div>
 			</li>
 			
 		      <li class="body-section">
 				<div class="container"><div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background-color: red;">##</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
+				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
+				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
+				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
+				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
+				        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><img src="http://placehold.it/250x250"></img></div>
 				</div></div>
 
 		       <!-- <div class="row">
