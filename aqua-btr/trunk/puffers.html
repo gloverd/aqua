@@ -21,6 +21,23 @@
 	if (typeof jQuery == 'undefined')
 		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
+
+<script type="text/javascript">
+	$('.make2').click(function(){ 
+	    if ( $('.row div').hasClass('col-sm-3') ) {
+	    $('.row div').removeClass('col-sm-3 col-lg-3');
+	    $('.row div').addClass('col-sm-6 col-lg-6'); 
+	    }
+	})
+	$('.make4').click(function(){ 
+	    if ( $('.row div').hasClass('col-sm-6') ) {
+	    $('.row div').removeClass('col-sm-6 col-lg-6');
+	    $('.row div').addClass('col-sm-3 col-lg-3'); 
+	      // do more stuff.
+	    }
+	})
+</script>
+
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
 <script type="text/javascript" language="javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
