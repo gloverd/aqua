@@ -2,8 +2,21 @@
 
 	  
 $(document).ready(function() {
+	    $('.center').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 2,
+        arrows: true
+    });
 });
 
 function shuffle () {
     $('.col-lg-4').shuffle();
+        $('.center').slick('unslick');
+    $('.center').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 2,
+        arrows: true
+    });
 }
