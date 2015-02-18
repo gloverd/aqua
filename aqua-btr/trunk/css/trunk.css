@@ -142,7 +142,9 @@ li.body-section p a.btn {line-height: 3; }
 div.row > div {padding: 0px 5px;}
 
 div.row div.caption {visibility:hidden !important;display:none !important;}
-div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important;}
+div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px; }
+
+
 
 
 header {
