@@ -145,7 +145,7 @@ div.row div.caption {visibility:hidden !important;display:none !important;}
 div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px; }
 
 div.thumbnail {padding:0px; margin-bottom:5px;}
-
+div.col-xs-12 div.thumbnail {padding:0px; margin-bottom:15px;}
 
 header {
 	height: 64px;
