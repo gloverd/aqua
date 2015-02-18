@@ -99,11 +99,12 @@ ul.responsive {margin-bottom: 0px;}
    height:100%;
    width:100%;
   background: url(http://aqua.org/~/media/Images/Home%20Page%20-%201300x540/dolphin/Main_Carousel_Homepage1_1300x540_11811-middle.jpg) no-repeat center center fixed; 
+  background-repeat: repeat-y;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-bottom:-40px;
+  margin-bottom:-40px:re
 }
 
 
