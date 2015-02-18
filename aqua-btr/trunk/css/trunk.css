@@ -144,7 +144,7 @@ div.row > div {padding: 0px 5px;}
 div.row div.caption {visibility:hidden !important;display:none !important;}
 div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px; }
 
-
+div.thumbnail {padding:0px; margin-bottom:10px;}
 
 
 header {
