@@ -127,9 +127,10 @@ ul.responsive {margin-bottom: 0px;}
 /* endding of my tomfoolery */
 
 .header-section,
-.body-section,
 .footer-section 
 {padding: 20px;}
+
+.body-section {padding:10px;}
 
 .header-section {/*background-color: #ffffff;*/}
 .body-section {/*background-color: #f4f5f6;*/ background-color: rgba(244, 245, 246, 0.5);}
