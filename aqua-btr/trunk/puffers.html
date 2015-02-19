@@ -22,7 +22,7 @@
 		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
 <script type="text/javascript">
-	(function($){
+	function($){
 	  $.fn.shuffle = function() {
 	      var allElems = this.get(),
 	          getRandom = function(max) {
@@ -39,7 +39,7 @@
 	      });
 	      return $(shuffled);
 	  };
-	})(jQuery);
+	};
 </script>
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
 <script type="text/javascript" language="javascript" src="js/functions.js"></script>
