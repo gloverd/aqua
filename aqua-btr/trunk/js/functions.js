@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
-        $(".row").each(function(){
+        $(".row > div").each(function(){
             var divs = $(this).find('div');
             for(var i = 0; i < divs.length; i++) $(divs[i]).remove();            
             //the fisher yates algorithm, from http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
