@@ -21,6 +21,26 @@
 	if (typeof jQuery == 'undefined')
 		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
+<script type="text/javascript">
+	(function($){
+	  $.fn.shuffle = function() {
+	      var allElems = this.get(),
+	          getRandom = function(max) {
+	              return Math.floor(Math.random() * max);
+	          },
+	          shuffled = $.map(allElems, function(){
+	              var random = getRandom(allElems.length),
+	                  randEl = $(allElems[random]).clone(true)[0];
+	              allElems.splice(random, 1);
+	              return randEl;
+	         });
+	      this.each(function(i){
+	          $(this).replaceWith($(shuffled[i]));
+	      });
+	      return $(shuffled);
+	  };
+	})(jQuery);
+</script>
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
 <script type="text/javascript" language="javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
@@ -58,7 +78,7 @@
 				      <button type="button" class="btn btn-default" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-12 col-sm-12 col-xs-12');"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></button>
 				    </div>
 				  <div class="btn-group" role="group" aria-label="...">
-				  <button type="button" class="btn btn-danger btn-large " href="#"><span class="glyphicon glyphicon-random" aria-hidden="true"  style="padding-right: 15px;"></span>Shuffle</button>
+				  <button type="button" class="btn btn-danger btn-large" onclick="shuffle()" href="#"><span class="glyphicon glyphicon-random" aria-hidden="true"  style="padding-right: 15px;"></span>Shuffle</button>
 				  </div>
 				</div>
 			</li>
