@@ -21,32 +21,6 @@
 	if (typeof jQuery == 'undefined')
 		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
-<script type="text/javascript">
-	(function($){
-	 
-	    $.fn.shuffle = function() {
-	 
-	        var allElems = this.get(),
-	            getRandom = function(max) {
-	                return Math.floor(Math.random() * max);
-	            },
-	            shuffled = $.map(allElems, function(){
-	                var random = getRandom(allElems.length),
-	                    randEl = $(allElems[random]).clone(true)[0];
-	                allElems.splice(random, 1);
-	                return randEl;
-	           });
-	 
-	        this.each(function(i){
-	            $(this).replaceWith($(shuffled[i]));
-	        });
-	 
-	        return $(shuffled);
-	 
-	    };
-	 
-	})(jQuery);
-</script>
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
 <script type="text/javascript" language="javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
@@ -116,8 +90,10 @@
 		                <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-4 col-sm-4 col-xs-4');"><span class="glyphicon glyphicon-th-large" aria-hidden="true" style="padding-right: 15px;" ></span>Large Grid</a>
 		                <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-12 col-sm-12 col-xs-12');"><span class="glyphicon glyphicon-stop" aria-hidden="true" style="padding-right: 15px;"></span>Large Image</a>
 		                <a class="btn btn-warning btn-large " href="#"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="padding-right: 15px;"></span>Fullscreen</a>
-		                <a class="btn btn-danger btn-large " href="#" onclick="$('img').shuffle();"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
-		              </p>	
+		                <a class="btn btn-danger btn-large " href="#" onclick=""><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
+		              </p>
+		              
+		               <button class="shuffleSlick" onclick="$('img').shuffle();">shuffle</button>
 				
 			</div>
 			</li>
