@@ -111,13 +111,18 @@ ul.responsive {margin-bottom: 0px;}
 .footer-section { margin-top:20px;}
 div.row div.col-md-2 div.caption,div.row div.col-sm-2 div.caption {
 	visibility:hidden; display:none; margin: 0px; 
+	div.row > div {padding: 0px 0px 0px 5px;}
 }
 div.row div.col-md-3 div.caption,div.row div.col-sm-3 div.caption, div.row div.col-sm-4 div.caption p {
 	visibility:hidden; display:none; margin: 0px; 
+	div.row > div {padding: 0px 0px 0px 5px;}
 }
 div.row div.col-md-6 div.captionp p ,div.row div.col-sm-4 div.caption p {
-	visibility:visible; display:block; margin: 0px; 
+	visibility:visible; display:block; margin: 0px;
+	div.row > div {padding: 0px 10px 0px 10px;}
 }
+
+.body-section {padding:10px;}
 
 .bgImage {
    position:static;
