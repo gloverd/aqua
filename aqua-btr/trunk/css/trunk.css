@@ -97,10 +97,10 @@ nav li a:hover {color: #000;}
     background-size: cover;
 }
 
-.br{background-position: bottom right;}
-.tr{background-position: top right;}
-.bl{background-position: bottom left;}
-.tl{background-position: top left;}
+.br {background-position: bottom right;}
+.tr {background-position: top right;}
+.bl {background-position: bottom left;}
+.tl {background-position: top left;}
 
 li.body-section p a.btn { display: inherit;}
 header h1 { margin-top:0px; margin-bottom:0px;}
