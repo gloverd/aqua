@@ -110,13 +110,13 @@ ul.responsive {margin-bottom: 0px;}
 
 .footer-section { margin-top:20px;}
 div.row div.col-md-2 div.caption,div.row div.col-sm-2 div.caption {
-	visibility:visible !important; display:block !important; margin: 0px; 
+	visibility:visible; display:block; margin: 0px; 
 }
 div.row div.col-md-3 div.caption,div.row div.col-sm-3 div.caption {
-	visibility:visible !important; display:block !important; margin: 0px; 
+	visibility:visible; display:block; margin: 0px; 
 }
 div.row div.col-md-4 div.captionp p ,div.row div.col-sm-4 div.caption p {
-	visibility:visible !important; display:block !important; margin: 0px; 
+	visibility:visible; display:block; margin: 0px; 
 }
 
 
