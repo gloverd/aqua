@@ -90,10 +90,10 @@
 		                <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-4 col-sm-4 col-xs-4');"><span class="glyphicon glyphicon-th-large" aria-hidden="true" style="padding-right: 15px;" ></span>Large Grid</a>
 		                <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-12 col-sm-12 col-xs-12');"><span class="glyphicon glyphicon-stop" aria-hidden="true" style="padding-right: 15px;"></span>Large Image</a>
 		                <a class="btn btn-warning btn-large " href="#"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="padding-right: 15px;"></span>Fullscreen</a>
-		                <a class="btn btn-danger btn-large " href="#" onclick=""><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
+		                <a class="btn btn-danger btn-large " href="#" onclick="$('div.row > div').shuffle();"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
 		              </p>
 		              
-		               <button class="shuffleSlick" onclick="$('img').shuffle();">shuffle</button>
+		               <button class="shuffleSlick" onclick="$('div.row > div').shuffle();">shuffle</button>
 				
 			</div>
 			</li>
