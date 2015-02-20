@@ -86,6 +86,10 @@ nav li a:hover {color: #000;}
 /*  Removable CSS  */
 
 /*david's edit*/
+.bread, .breadend {padding-right:0px;padding-left:0px;}
+
+.bread::after {content: " / ";}
+.breadend {padding-right:15px;color:#fff;}
 
 .ratio {
     position:relative;
