@@ -87,9 +87,9 @@ nav li a:hover {color: #000;}
 
 /*david's edit*/
 a.bread, .breadend {padding-right:0px;padding-left:0px;}
-
-a.bread::after {content: "/";color:#000;text-decoration: none;cursor:default;padding-left:5px;padding-right:5px;}
-a.breadend {padding-right:15px;color:blue;text-decoration: none;cursor:default;}
+a.bread:hover, a.breadend:hover {text-decoration: none;cursor:default;}
+a.bread::after {content: "/";color:#000;padding-left:5px;padding-right:5px;}
+a.breadend {padding-right:15px;color:blue;}
 
 .ratio {
     position:relative;
