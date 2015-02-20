@@ -86,10 +86,10 @@ nav li a:hover {color: #000;}
 /*  Removable CSS  */
 
 /*david's edit*/
-.bread, .breadend {padding-right:0px;padding-left:0px;}
+a.bread, .breadend {padding-right:0px;padding-left:0px;}
 
-.bread::after {content: " / ";color:#000;}
-.breadend {padding-right:15px;color:blue;text-decoration: none;}
+a.bread::after {content: " / ";color:#000;text-decoration: none;cursor:default;}
+a.breadend {padding-right:15px;color:blue;text-decoration: none;cursor:default;}
 
 .ratio {
     position:relative;
