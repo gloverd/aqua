@@ -18,3 +18,16 @@ $(document).ready(function(){
         });                    
     }
 });
+
+
+// init Isotope
+var $container = $('#container').isotope({
+  // options
+  //itemSelector: '.div-shuffle',
+});
+// filter items on button click
+$('#filters').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $container.isotope({ filter: filterValue });
+
+});
