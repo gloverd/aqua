@@ -17,15 +17,4 @@ $(document).ready(function(){
             for(var i = 0; i < divs.length; i++) $(divs[i]).appendTo(this);
         });                    
     }
-
-var $container = $('#container').isotope({
-  // options
-  //itemSelector: '.div-shuffle',
-});
-// filter items on button click
-$('#filters').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $container.isotope({ filter: filterValue });
-
-});
 });
