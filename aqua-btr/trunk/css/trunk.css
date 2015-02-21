@@ -105,6 +105,8 @@ a.breadend {padding-right:15px;color:blue;}
 .tr {background-position: top right;}
 .bl {background-position: bottom left;}
 .tl {background-position: top left;}
+.bc {background-position: bottom center;}
+.cc {background-position: top center;}
 
 li.body-section p a.btn { display: inherit;}
 header h1 { margin-top:0px; margin-bottom:0px;}
