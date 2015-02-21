@@ -20,8 +20,28 @@
   if (typeof jQuery == 'undefined')
     document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
+<script type="text/javascript">
+// init Isotope
+var $container = $('#container').isotope({
+  // options
+});
+// filter items on button click
+$('#filters').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $container.isotope({ filter: filterValue });
+
+$('#shuffle').click(function(){
+    $container.isotope('shuffle');
+    addEvenClasses();
+  });
+
+});
+
+  
+</script>
 <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
 <script type="text/javascript" language="javascript" src="js/functions.js"></script>
+<script type="text/javascript" language="javascript" src="js/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -94,17 +114,25 @@
                     <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-4 col-sm-4 col-xs-4 div-shuffle');"><span class="glyphicon glyphicon-th-large" aria-hidden="true" style="padding-right: 15px;" ></span>Large Grid</a>
                     <a class="btn btn-primary btn-large " href="#" onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-6 col-sm-12 col-xs-12 div-shuffle');"><span class="glyphicon glyphicon-stop" aria-hidden="true" style="padding-right: 15px;"></span>Large Image</a>
                     <a class="btn btn-warning btn-large " href="#"><span class="glyphicon glyphicon-fullscreen" aria-hidden="true" style="padding-right: 15px;"></span>Fullscreen</a>
-                    <a class="btn btn-danger btn-large btn-shuffle" href="#"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
+                    <a id="shuffle" class="btn btn-danger btn-large" href="#"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
                   </p>
+                  
+                  <!-- filter button group -->
+                  <div id="filters" class="button-group">
+                    <button data-filter="*">show all</button>
+                    <button data-filter=".br">bottom right</button>
+                    <button data-filter=".bl">bottom left</button>
+                    <button data-filter=".unicorn, .wrasse">unicorn and wrasse</button>
+                  </div>
                   
       </div>
       </li>
       
           <li class="body-section">
-        <div class="container"><div class="row">
+        <div class="container"><div id="row" class="row">
         
           
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle unicorn"><div class="thumbnail">
   <div class="ratio br" style="background-image:url('../images/pic/image2.jpeg');"></div>
   <div class="caption">
   <h4>Bluespine Unicornfish</h4>
@@ -113,7 +141,7 @@
   <p class="info info-line2">Blue tail spines</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle unicorn"><div class="thumbnail">
   <div class="ratio bl" style="background-image:url('../images/pic/image3.jpeg');"></div>
   <div class="caption">
   <h4>Spotted Unicornfish</h4>
@@ -122,7 +150,7 @@
   <p class="info info-line2">White tail, Brown with dark spots on head</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle unicorn"><div class="thumbnail">
   <div class="ratio tl" style="background-image:url('../images/pic/image4.jpeg');"></div>
   <div class="caption">
   <h4>Bignose Unicornfish</h4>
@@ -131,7 +159,7 @@
   <p class="info info-line2">Able to pale or darken colors and markings</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle unicorn"><div class="thumbnail">
   <div class="ratio bl" style="background-image:url('../images/pic/image6.jpeg');"></div>
   <div class="caption">
   <h4>Orange-Spine Unicornfish (Lipstick/Naso Tang)</h4>
@@ -365,7 +393,7 @@
   <p class="info info-line2">Juvenile: dark brown with several large irregular  white spots</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle wrasse"><div class="thumbnail">
   <div class="ratio bl" style="background-image:url('../images/pic/image32.jpeg');"></div>
   <div class="caption">
   <h4>Yellowtail Coris Wrasse</h4>
@@ -374,7 +402,7 @@
   <p class="info info-line2">Males are darker than females, light color bar vertically bisects the body</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle wrasse"><div class="thumbnail">
   <div class="ratio bl" style="background-image:url('../images/pic/image34.jpeg');"></div>
   <div class="caption">
   <h4>Napoleon Wrasse</h4>
@@ -383,7 +411,7 @@
   <p class="info info-line2">Pronounced hump over eyes, Females are reddish-orange</p>
 </div></div></div>
 
-<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle"><div class="thumbnail">
+<div class="col-sm-4 col-md-4 col-lg-4 div-shuffle wrasse"><div class="thumbnail">
   <div class="ratio br" style="background-image:url('../images/pic/image35.jpeg');"></div>
   <div class="caption">
   <h4>Red-breasted Wrasse-Male</h4>
