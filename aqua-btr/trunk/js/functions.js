@@ -17,9 +17,9 @@ $(document).ready(function(){
             for(var i = 0; i < divs.length; i++) $(divs[i]).appendTo(this);
         });                    
     }
-});
 
 
+$(document).ready(function(){
 // init Isotope
 var $container = $('#container').isotope({
   // options
@@ -30,4 +30,5 @@ $('#filters').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
   $container.isotope({ filter: filterValue });
 
+});
 });
