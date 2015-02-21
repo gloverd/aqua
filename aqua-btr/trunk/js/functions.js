@@ -18,9 +18,6 @@ $(document).ready(function(){
         });                    
     }
 
-
-$(document).ready(function(){
-// init Isotope
 var $container = $('#container').isotope({
   // options
   //itemSelector: '.div-shuffle',
