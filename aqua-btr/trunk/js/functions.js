@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('div.row > div').addClass('div-shuffle div-col-md');
     $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
     $('.caption').addClass('caption-show');
-    $('.btn-show-info p').text("Hide Info");
+    $('.btn-show-info').text("<span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="padding-right: 15px;"></span> Hide Info");
     
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
