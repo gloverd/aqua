@@ -33,6 +33,16 @@ $(document).ready(function(){
         }
     });
     
+    $('.btn-grid-sm').click(function(){
+      if ($('div.row > div').hasClass('div-col-sm')) {
+            //doSomething();
+        } else {      
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-sm');
+            $('div.row > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
+        }
+    });
+    
 
    
 });
