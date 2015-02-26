@@ -4,6 +4,7 @@ CACHE MANIFEST
 #html files
 allFish.html
 index.html
+puffers.html
 
 #java/css files
 css/reset.css
