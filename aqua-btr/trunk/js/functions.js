@@ -21,13 +21,13 @@ $(document).ready(function(){
      $('.btn-show-info').click(function(){
       if ($(this).hasClass('btn-warning')) {
             //doSomething();
-             $('.btn-show-info').addClass('btn-danger');
-             $('.btn-show-info').removeClass('btn-warning');
+             $(this).addClass('btn-danger');
+             $(this).removeClass('btn-warning');
              $('.caption').removeClass('caption-hidden');
              $('.caption').addClass('caption-show');
         } else {      
-            $('.btn-show-info').addClass('btn-warning');
-            $('.btn-show-info').removeClass('btn-danger'); 
+            $(this).addClass('btn-warning');
+            $(this).removeClass('btn-danger'); 
              $('.caption').addClass('caption-hidden');
              $('.caption').removeClass('caption-show');
         }
@@ -49,7 +49,7 @@ $(document).ready(function(){
         } else {      
             $('div.row > div').removeClass();
             $('div.row > div').addClass('div-shuffle div-col-md');
-            $('div.row > div').addClass(' 'col-lg-4 col-md-4 col-sm-4  col-xs-4');
+            $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
         }
     });
     
