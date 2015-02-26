@@ -27,15 +27,17 @@ $(document).ready(function(){
      $('.btn-show-info').click(function(){
       if ($(this).hasClass('btn-warning')) {
             //doSomething();
-             $(this).addClass('btn-danger showinfo');
-             $(this).removeClass('btn-warning hideinfo');
+             $(this).addClass('btn-danger');
+             $(this).removeClass('btn-warning');
+             $(this).text("Hide Info");
              $('.caption').removeClass('caption-hidden');
              $('.caption').addClass('caption-show');
         } else {      
             $(this).addClass('btn-warning hideinfo');
             $(this).removeClass('btn-danger showinfo'); 
-             $('.caption').addClass('caption-hidden');
-             $('.caption').removeClass('caption-show');
+            $(this).text("Show Info");
+            $('.caption').addClass('caption-hidden');
+            $('.caption').removeClass('caption-show');
         }
     });
     
