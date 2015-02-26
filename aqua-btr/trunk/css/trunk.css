@@ -189,13 +189,8 @@ div.row div.div-col-sm div.caption-show {visibility:hidden !important; display:n
 div.row div.div-col-md div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
 div.row div.div-col-md div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px; height:55px;}
 
-
-.caption-hidden-xs {visibility:hidden !important; display:none !important;}
-.caption-show-xs {visibility:visible !important; display:block !important; margin: 0px;}*/
-
-
-div.row div.caption {visibility:hidden !important;display:none !important;}
-div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px;}
+/*div.row div.caption {visibility:hidden !important;display:none !important;}
+div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px;}*/
 
 div.thumbnail {padding:0px; margin-bottom:5px;}
 div.col-xs-12 div.thumbnail {padding:0px; margin-bottom:15px;}
