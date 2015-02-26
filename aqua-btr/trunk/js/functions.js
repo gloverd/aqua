@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    /*onload*/
+    $('div.row > div').removeClass();
+    $('div.row > div').addClass('div-shuffle div-col-md');
+    $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
+    $('.caption').addClass('caption-show');
+    
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
         $(".row").each(function(){
