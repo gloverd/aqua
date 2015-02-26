@@ -22,7 +22,8 @@ $(document).ready(function(){
       if ($(this).hasClass('btn-warning')) {
             //doSomething();
              $(this).addClass('btn-danger');
-              $(this).removeClass('btn-warning'); 
+             $(this).removeClass('btn-warning');
+             $('.caption').removeClass('btn-warning'); 
         } else {      
             $(this).addClass('btn-warning');
             $(this).removeClass('btn-danger'); 
@@ -30,23 +31,33 @@ $(document).ready(function(){
     });
     
    $('.btn-grid-sm').click(function(){
-      if ($(this).hasClass('btn-warning')) {
+      if ($(div.row > div).hasClass('div-col-sm')) {
             //doSomething();
-            $(this).addClass('btn-danger');
-            $(this).removeClass('btn-warning');
-            $('div.row > div').removeClass();
-            $('div.row > div').addClass('col-sm-2 col-xs-3 div-shuffle');
         } else {      
-            $(this).addClass('btn-warning');
-            $(this).removeClass('btn-danger');
             $('div.row > div').removeClass();
-            $('div.row > div').addClass('col-md-4 col-sm-4 col-xs-4 div-shuffle');
+            $('div.row > div').addClass('div-shuffle div-col-sm');
+            $('div.row > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
         }
     });
    
-   
-   
-   //onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-4 col-sm-4 col-xs-4 div-shuffle');"
-   //onclick="$('div.row > div').removeClass();$('div.row > div').addClass('col-md-6 col-sm-12 col-xs-12 div-shuffle');"
+    $('.btn-grid-md').click(function(){
+      if ($(div.row > div).hasClass('div-col-md')) {
+            //doSomething();
+        } else {      
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-md');
+            $('div.row > div').addClass(' 'col-lg-4 col-md-4 col-sm-4  col-xs-4');
+        }
+    });
     
+    $('.btn-grid-lg').click(function(){
+      if ($(div.row > div).hasClass('div-col-lg')) {
+            //doSomething();
+        } else {      
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-lg');
+            $('div.row > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
+        }
+    });
+   
 });
