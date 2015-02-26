@@ -19,14 +19,17 @@ $(document).ready(function(){
     }
 
      $('.btn-show-info').click(function(){
-      if ($(this).hasClass('btn-warning')) {
+      if ($(.caption).hasClass('btn-warning')) {
             //doSomething();
-             $(this).addClass('btn-danger');
-             $(this).removeClass('btn-warning');
-             $('.caption').removeClass('btn-warning'); 
+             $('.btn-show-info').addClass('btn-danger');
+             $('.btn-show-info').removeClass('btn-warning');
+             $('.caption').removeClass('caption-hidden');
+             $('.caption').addClass('caption-show');
         } else {      
-            $(this).addClass('btn-warning');
-            $(this).removeClass('btn-danger'); 
+            $('.btn-show-info').addClass('btn-warning');
+            $('.btn-show-info').removeClass('btn-danger'); 
+             $('.caption').addClass('caption-hidden');
+             $('.caption').removeClass('caption-show');
         }
     });
     
