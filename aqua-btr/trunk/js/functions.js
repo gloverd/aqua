@@ -17,8 +17,16 @@ $(document).ready(function(){
             for(var i = 0; i < divs.length; i++) $(divs[i]).appendTo(this);
         });                    
     }
-});
 
-$( ".btn-show-info" ).click(function() {
-  $( this ).toggleClass( ".info" );
+     $('.btn-has-class').click(function(){
+      if ($(this).hasClass('btn-warning')) {
+            //doSomething();
+             $(this).addClass('btn-danger'); 
+        } else {      
+            $(this).addClass('btn-warning');
+            $(this).removeClass('btn-danger'); 
+        }
+    });
+    
+    
 });
