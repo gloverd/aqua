@@ -21,7 +21,8 @@ $(document).ready(function(){
      $('.btn-show-info').click(function(){
       if ($(this).hasClass('btn-warning')) {
             //doSomething();
-             $(this).addClass('btn-danger'); 
+             $(this).addClass('btn-danger');
+              $(this).removeClass('btn-warning'); 
         } else {      
             $(this).addClass('btn-warning');
             $(this).removeClass('btn-danger'); 
