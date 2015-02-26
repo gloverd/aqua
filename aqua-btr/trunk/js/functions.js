@@ -30,13 +30,13 @@ $(document).ready(function(){
             //doSomething();
              $(this).addClass('btn-danger');
              $(this).removeClass('btn-warning');
-             $('.btn-show-info p').text("Hide Info");
+             $('.btn-show-info').text("Hide Info");
              $('.caption').removeClass('caption-hidden');
              $('.caption').addClass('caption-show');
         } else {      
             $(this).addClass('btn-warning hideinfo');
             $(this).removeClass('btn-danger showinfo'); 
-            $('.btn-show-info p').text("Show Info");
+            $('.btn-show-info').text("Show Info");
             $('.caption').addClass('caption-hidden');
             $('.caption').removeClass('caption-show');
         }
