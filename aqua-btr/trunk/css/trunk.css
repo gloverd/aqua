@@ -118,6 +118,9 @@ ul.responsive {margin-bottom: 0px;}
 
 div.row > div {padding: 0px 5px  !important;}
 
+.btn-show-info.showinfo p::after {content: "Show Information";}
+.btn-show-info.hideinfo p::after {content: "Hide Information";}
+
 .caption-hidden {visibility:hidden; display:none; margin: 0px;}
 .caption-show {visibility:visible; display:block; margin: 0px;}
 
