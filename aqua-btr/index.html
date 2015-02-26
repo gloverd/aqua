@@ -1,164 +1,152 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head> 
 
-    <title>Welcome to Blacktip Reef!</title>
+<title>AQUA-BTR</title> 
+<!-- Meta Data -->
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1, user-scalable=0;" name="viewport" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <!-- Bootstrap -->
-    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-    	<!--[if lt IE 9]>
-	<script src="js/html5shiv.js"></script>
-	<![endif]-->
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+<style>
+	.body-section {	padding:0px 40px;}
+	div.row > div {	padding:0px 20px;}
+</style>
 
-	<!-- MetaData -->
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<!-- Javascript -->
-    <script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-    
-    <script type="text/javascript" language="javascript" src="js/trunk.js"></script>
-    
-    <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>-->
-    <!-- <script type="text/javascript" src="bootstrap/js/respond.min.js"></script>-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <!-- end-->
-
-
-  </head>
-
-  <body>
-    <div id="bgImage">
-    
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Blacktip Reef</a>
-        <div class="nav-collapse collapse">
-          <ul class="nav navbar-nav">     <!--<li class="active"><a href="index.html">Home</a></li>-->        <li class="dropdown">
-           	 <li><a href="mailto:david@glover.it">Contact</a></li>
- 			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select a Fish Group<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="allFish.html">All the Fish</a></li>
-                <li class="divider"></li>
-                <li><a href="sharks.html">Sharks & Rays</a></li>
-                <li><a href="wrasse.html">Wrasse</a></li>
-                <li><a href="groupers.html">Groupers</a></li>
-                <li><a href="trigger.html">Triggerfish</a></li>
-                <li><a href="puffers.html">Puffers</a></li>
-                <li><a href="surgeon.html">Surgeonfish</a></li>
-                <li><a href="damsel.html">Damsels</a></li>
-                <li><a href="angel.html">Angelfish</a></li>
-                <li><a href="hawk.html">Hawk/Bat/Sweet</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container" id="mainBody">
-
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron visible-lg">
-        <h1>Welcome to Blacktip Reef!</h1>
-        <p>Please select a group of fish below to view more information on those fish. Tapping on the fish will toggle information about that fish.</p>
-        <p>You can swipe to change fish, or tap to display buttons and more options.</p>
-        <p><a class="btn btn-primary btn-large" href="allFish.html">Click here for All Fish! &raquo;</a></p>
-      </div>
-
-      <div class="body-content">
-
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Sharks & Rays</h2>
-            <p class="hidden-sm hidden-md hidden-xs">How many sharks are in Blacktip Reef?</p>
-            <p><a class="btn btn-danger" href="sharks.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Sharks </a></p>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Wrasse</h2>
-            <p class="hidden-sm hidden-md hidden-xs">The wrasses are a family, the Labridae, of marine fish, many of which are brightly coloured. The family is large and diverse, with over 600 species in 82 genera. They are typically small fish, mostly less than 20 centimetres (7.9 in) long, although the largest, the Humphead wrasse, can measure up to 2.5 metres (8.2 ft).</p>
-            <p><a class="btn btn-success" href="wrasse.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Wrasse Family &raquo;</a></p>
-         </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Grouper</h2>
-            <p class="hidden-sm hidden-md hidden-xs">The Grouper is a large fish that lives in salt water. It likes warm waters. Do you know facts about Groupers?</p>
-            <p><a class="btn btn-warning" href="groupers.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Groupers &raquo;</a></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Triggerfish</h2>
-            <p class="hidden-sm hidden-md hidden-xs">So called trigger because they can trigger their fins.</p>
-            <p><a class="btn btn-info" href="trigger.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Triggerfish &raquo;</a></p>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Pufferfish</h2>
-            <p class="hidden-sm hidden-md hidden-xs">Pufferfish</p>
-            <p><a class="btn btn-primary" href="puffers.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Pufferfish &raquo;</a></p>
-         </div>
-          <div class="col-lg-4 col-md-4 col-sm-4">
-            <h2>Surgeonfish</h2>
-            <p class="hidden-sm hidden-md hidden-xs">Warning: Not medically licensed..</p>
-            <p><a class="btn btn-success" href="surgeon.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Surgeonfish &raquo;</a></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4 ">
-            <h2>Damsels</h2>
-            <p class="hidden-sm hidden-md hidden-xs">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            <p><a class="btn btn-warning" href="damsel.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Damsels &raquo;</a></p>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 ">
-            <h2>Angelfish</h2>
-            <p class="hidden-sm hidden-md hidden-xs">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            <p><a class="btn btn-danger" href="angel.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Angelfish &raquo;</a></p>
-         </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 ">
-            <h2>Hawkfish, Sweetlips, & Batfish</h2>
-            <p class="hidden-sm hidden-md hidden-xs">There are relatively few of these so they are grouped together.</p>
-            <p><a class="btn btn-info" href="hawk.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View these Fish &raquo;</a></p>
-          </div>
-        </div>
-
-
-        <hr>
-
-        <footer>
-          <p>&copy; David Glover 2013    |    National Aquarium    |    Work in Progress</p>
-          <!--<p>made with trunk.js, slick, bootstrap, and github</p>-->
-        	
-        </footer>
-      </div>
-      
-	 </div> <!-- /container -->
-
-
-</div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42888800-1', 'latobada.com');
-  ga('send', 'pageview');
-
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))
 </script>
-  </body>
+<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+<script type="text/javascript" src="bootstrap/js/gTrack.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+
+</head> 
+ 
+<body> 
+
+<div class="bgImage">
+<div class="pageContainer">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>AQUA-BTR</h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<!-- breadcrumb menu-->
+			<li class="hidden-xs"><a class="bread" href="http://aqua.glover.it">Home</a></li>
+			<li class="hidden-xs"><a class="bread" href="http://aqua.glover.it/aqua-btr">Blacktip Reef</a></li>
+			<li class="hidden-xs"><a class="breadend"href="#">Welcome</a></a></li>
+			<!-- mobile menu-->
+			<li class="visible-xs-block"><a href="allFish.html">All Fish</a></li>
+			<li class="visible-xs-block"><a href="sharks.html">Sharks & Rays</a></li>
+	                <li class="visible-xs-block"><a href="wrasse.html">Wrasse</a></li>
+	                <li class="visible-xs-block"><a href="groupers.html">Groupers</a></li>
+	                <li class="visible-xs-block"><a href="trigger.html">Triggerfish</a></li>
+	                <li class="visible-xs-block"><a href="puffers.html">Puffers</a></li>
+	                <li class="visible-xs-block"><a href="surgeon.html">Surgeonfish</a></li>
+	                <li class="visible-xs-block"><a href="damsel.html">Damsels</a></li>
+	                <li class="visible-xs-block"><a href="angel.html">Angelfish</a></li>
+	                <li class="visible-xs-block"><a href="hawk.html">Hawk/Bat/Sweet</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+			<li class="header-section">
+				      	<div class="jumbotron hidden-xs">
+				        <h1>Welcome to Blacktip Reef!</h1>
+				        <p>Please select a group of fish below to view more information on those fish.</p>
+				        <p>You can toggle grid sizes for more/less information about the fish. Fullscreen smartphone mode is under re-construction.</p>
+				        <p><a class="btn btn-primary btn-large" href="allFish.html">Click here for All Fish! &raquo;</a></p>
+					</div>
+					
+					<!--<p class="placefiller">HEADER</p>-->
+			</li>
+			
+			
+		      <li class="body-section">
+		        <div class="row">
+		                <div class="col-lg-4 col-md-4 col-sm-4 visible-xs-block">
+		                  <h2>ALL FISH</h2>
+		                  <p><a class="btn btn-primary" href="allFish.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> VIEW ALL FISH </a></p>
+		                </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Sharks & Rays</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-danger" href="sharks.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Sharks </a></p>
+		                </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Wrasse</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-success" href="wrasse.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Wrasse Family </a></p>
+		               </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Grouper</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-warning" href="groupers.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Groupers </a></p>
+		                </div>
+		              </div>
+		              <div class="row">
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Triggerfish</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-info" href="trigger.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Triggerfish  </a></p>
+		                </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Pufferfish</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-primary" href="puffers.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Pufferfish </a></p>
+		               </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4">
+		                  <h2>Surgeonfish</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-success" href="surgeon.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Surgeonfish </a></p>
+		                </div>
+		              </div>
+		              <div class="row">
+		                <div class="col-lg-4 col-md-4 col-sm-4 ">
+		                  <h2>Damsels</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-warning" href="damsel.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Damsels </a></p>
+		                </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4 ">
+		                  <h2>Angelfish</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-danger" href="angel.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Angelfish </a></p>
+		               </div>
+		                <div class="col-lg-4 col-md-4 col-sm-4 ">
+		                  <h2>Hawkfish, Sweetlips, & Batfish</h2>
+		                  <p class="hidden-sm hidden-xs"></p>
+		                  <p><a class="btn btn-info" href="hawk.html"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> View these Fish </a></p>
+		                </div>
+		              </div>
+		      </li>
+			<li class="footer-section">
+				<p>&copy; David Glover 2013-2015 | National Aquarium | Work in Progress</p>
+			</li>
+		</ul>
+	</div>
+	
+</div>
+</div> <!-- bgImage -->
+
+	
+</body> 
 </html>
