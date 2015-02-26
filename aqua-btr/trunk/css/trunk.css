@@ -124,12 +124,6 @@ div.row > div {padding: 0px 5px  !important;}
 div.row div.div-col-sm div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
 div.row div.div-col-sm div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px; height:55px;}
 
-/*div.row div.div-col-md div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
-div.row div.div-col-md div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px;}
-
-div.row div.div-col-lg div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
-div.row div.div-col-lg div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px;}*/
-
 .body-section {padding:10px;}
 
 .bgImage {
@@ -187,7 +181,16 @@ li.body-section p a.btn {line-height: 3; }
 .header-section {padding-top: 0px; padding-bottom: 0px;}
 div.row > div {padding: 0px 0px 0px 5px;}
 
-/*.caption-hidden-xs {visibility:hidden !important; display:none !important;}
+.caption-hidden {visibility:hidden; display:none; margin: 0px;}
+.caption-show {visibility:visible; display:block; margin: 0px;}
+
+div.row div.div-col-sm div.caption-show {visibility:hidden !important; display:none !important; margin: 0px;}
+
+div.row div.div-col-md div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
+div.row div.div-col-md div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px; height:55px;}
+
+
+.caption-hidden-xs {visibility:hidden !important; display:none !important;}
 .caption-show-xs {visibility:visible !important; display:block !important; margin: 0px;}*/
 
 
