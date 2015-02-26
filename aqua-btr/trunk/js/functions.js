@@ -18,3 +18,7 @@ $(document).ready(function(){
         });                    
     }
 });
+
+$( ".btn-show-info" ).click(function() {
+  $( this ).toggleClass( ".info" );
+});
