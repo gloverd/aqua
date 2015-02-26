@@ -19,7 +19,7 @@ $(document).ready(function(){
     }
 
      $('.btn-show-info').click(function(){
-      if ($(.caption).hasClass('btn-warning')) {
+      if ($(this).hasClass('btn-warning')) {
             //doSomething();
              $('.btn-show-info').addClass('btn-danger');
              $('.btn-show-info').removeClass('btn-warning');
@@ -34,7 +34,7 @@ $(document).ready(function(){
     });
     
    $('.btn-grid-sm').click(function(){
-      if ($(div.row > div).hasClass('div-col-sm')) {
+      if ($('div.row > div').hasClass('div-col-sm')) {
             //doSomething();
         } else {      
             $('div.row > div').removeClass();
@@ -44,7 +44,7 @@ $(document).ready(function(){
     });
    
     $('.btn-grid-md').click(function(){
-      if ($(div.row > div).hasClass('div-col-md')) {
+      if ($('div.row > div').hasClass('div-col-md')) {
             //doSomething();
         } else {      
             $('div.row > div').removeClass();
@@ -54,7 +54,7 @@ $(document).ready(function(){
     });
     
     $('.btn-grid-lg').click(function(){
-      if ($(div.row > div).hasClass('div-col-lg')) {
+      if ($('div.row > div').hasClass('div-col-lg')) {
             //doSomething();
         } else {      
             $('div.row > div').removeClass();
