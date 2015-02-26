@@ -18,7 +18,7 @@ $(document).ready(function(){
         });                    
     }
 
-     $('.btn-has-class').click(function(){
+     $('.btn-show-info').click(function(){
       if ($(this).hasClass('btn-warning')) {
             //doSomething();
              $(this).addClass('btn-danger'); 
