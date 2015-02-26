@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('div.row > div').addClass('div-shuffle div-col-md');
     $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
     $('.caption').addClass('caption-show');
-    $('.btn-show-info').text("Hide Info");
+    $('.btn-show-info p').text("Hide Info");
     
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
@@ -30,13 +30,13 @@ $(document).ready(function(){
             //doSomething();
              $(this).addClass('btn-danger');
              $(this).removeClass('btn-warning');
-             $(this).text("Hide Info");
+             $('.btn-show-info p').text("Hide Info");
              $('.caption').removeClass('caption-hidden');
              $('.caption').addClass('caption-show');
         } else {      
             $(this).addClass('btn-warning hideinfo');
             $(this).removeClass('btn-danger showinfo'); 
-            $(this).text("Show Info");
+            $('.btn-show-info p').text("Show Info");
             $('.caption').addClass('caption-hidden');
             $('.caption').removeClass('caption-show');
         }
