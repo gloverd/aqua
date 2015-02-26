@@ -117,9 +117,18 @@ ul.responsive {margin-bottom: 0px;}
 .footer-section { margin-top:20px;}
 
 div.row > div {padding: 0px 5px  !important;}
-div.row div.col-md-2 div.caption,div.row div.col-sm-2 div.caption {visibility:hidden; display:none; margin: 0px;}
-div.row div.col-md-3 div.caption,div.row div.col-sm-3 div.caption, div.row div.col-sm-4 div.caption p {	visibility:hidden; display:none; margin: 0px;}
-div.row div.col-md-6 div.captionp p ,div.row div.col-sm-4 div.caption p {visibility:visible; display:block; margin: 0px;}
+
+.caption-hidden {visibility:hidden; display:none; margin: 0px;}
+.caption-show {visibility:visible; display:block; margin: 0px;}
+
+div.row div.div-col-sm div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
+div.row div.div-col-sm div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px;}
+
+/*div.row div.div-col-md div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
+div.row div.div-col-md div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px;}
+
+div.row div.div-col-lg div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
+div.row div.div-col-lg div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px;}*/
 
 .body-section {padding:10px;}
 
@@ -178,8 +187,12 @@ li.body-section p a.btn {line-height: 3; }
 .header-section {padding-top: 0px; padding-bottom: 0px;}
 div.row > div {padding: 0px 0px 0px 5px;}
 
+/*.caption-hidden-xs {visibility:hidden !important; display:none !important;}
+.caption-show-xs {visibility:visible !important; display:block !important; margin: 0px;}*/
+
+
 div.row div.caption {visibility:hidden !important;display:none !important;}
-div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px; }
+div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px;}
 
 div.thumbnail {padding:0px; margin-bottom:5px;}
 div.col-xs-12 div.thumbnail {padding:0px; margin-bottom:15px;}
