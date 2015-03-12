@@ -106,40 +106,6 @@
                       <a class="btn btn-info btn-large btn-show-info" href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="padding-right: 15px;"></span>Toggle Info</a>
 
                       <button class="btn button--toggle">Toggle Flickity</button>
-                      
-          <script type="text/javascript">
-          // external js: flickity.pkgd.js
-
-$(document).ready( function() {
-		  var $gallery = $('.gallery').flickity();
-  var isFlickity = true;
-  // toggle Flickity on/off
-  $('.button--toggle').on( 'click', function() {
-    if ( isFlickity ) {
-      // destroy Flickity
-      $gallery.flickity('destroy');
-    } else {
-      // init new Flickity
-      $gallery.flickity();
-    }
-    isFlickity = !isFlickity;
-  });
-});
-
-// HEADS UP: this code will be fixed in Flickity v0.3
-var destroy = Flickity.prototype.destroy;
-Flickity.prototype.destroy = function() {
-  destroy.call( this );
-  if ( jQuery && this.$element ) {
-    jQuery.removeData( this.element, 'flickity' );
-  }
-};
-
-
-          </script>
-
-
-
                       <a class="btn btn-danger btn-large btn-shuffle" href="#"><span class="glyphicon glyphicon-random" aria-hidden="true" style="padding-right: 15px;"></span>Shuffle</a>
                     </p>
 
