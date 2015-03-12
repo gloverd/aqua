@@ -77,5 +77,28 @@ $(document).ready(function(){
         }
     });
 
-   
+
+  var $gallery = $('.gallery').flickity();
+  var isFlickity = true;
+  // toggle Flickity on/off
+  $('.button--toggle').on( 'click', function() {
+    if ( isFlickity ) {
+      // destroy Flickity
+      $gallery.flickity('destroy');
+    } else {
+      // init new Flickity
+      $gallery.flickity();
+    }
+    isFlickity = !isFlickity;
+  });
 });
+
+// HEADS UP: this code will be fixed in Flickity v0.3
+var destroy = Flickity.prototype.destroy;
+Flickity.prototype.destroy = function() {
+  destroy.call( this );
+  if ( jQuery && this.$element ) {
+    jQuery.removeData( this.element, 'flickity' );
+  }
+};
+
