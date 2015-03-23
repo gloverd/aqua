@@ -86,6 +86,9 @@ nav li a:hover {color: #000;}
 /*  Removable CSS  */
 
 /*david's edit*/
+
+.info-size {visibility:hidden !important; display:none !important; }
+
 a.bread, .breadend {padding-right:0px;padding-left:0px;}
 a.bread:hover, a.breadend:hover {text-decoration: none;}
 a.braedend:hover {cursor:default;}
@@ -120,6 +123,8 @@ div.row > div {padding: 0px 5px  !important;}
 
 .caption-hidden {visibility:hidden; display:none; margin: 0px;}
 .caption-show {visibility:visible; display:block; margin: 0px;}
+
+.info-size {visibility:hidden !important; display:none !important; }
 
 div.row div.div-col-sm div.caption-show p {visibility:hidden !important; display:none !important; margin: 0px;}
 div.row div.div-col-sm div.caption-show h4 {visibility:visible !important; display:block !important; margin: 0px; height:55px;}
@@ -175,6 +180,8 @@ div.row div.col-md-6 div.caption, div.row div.col-md-4 div.caption { height:150p
 
 
 @media only screen and (max-width: 768px) {
+
+
 
 /*david's edits */
 li.body-section p a.btn {line-height: 3; }
