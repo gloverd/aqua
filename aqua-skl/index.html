@@ -337,12 +337,8 @@ body {
         
         $(document).ready(function() {
         
-$('[data-toggle="tooltip"]').tooltip({
-	data-placement: bottom
-})
-$('[data-toggle="popover"]').popover({
-	data-placement: bottom
-})
+$('[data-toggle="tooltip"]').tooltip()
+$('[data-toggle="popover"]').popover()
 
             /* activate sidebar */
 $('#sidebar').affix({
