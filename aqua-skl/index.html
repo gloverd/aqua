@@ -197,12 +197,12 @@ body {
 	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-36-Image-157.jpg" class="img-responsive"><p>Rock Beauty</p></div>
 	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-36-Image-156.jpg" class="img-responsive"><p>Rock Beauty - Juvenile</p></div>
 	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-4-Image-12.jpg" class="img-responsive"><p>Blue Angelfish</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-4-Image-10.jpg" class="img-responsive"><p>Queen Angelfish - Juvenile</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-4-Image-11.jpg" class="img-responsive"><p>Blue Angelfish - Juvenile</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-18.jpg" class="img-responsive"><p>French Angelfish</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-17.jpg" class="img-responsive"><p>French Angelfish - Juvenile</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-19.jpg" class="img-responsive"><p>Gray Angelfish</p></div>
-	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-20.jpg" class="img-responsive"><p>Gray Angelfish - Juvenile</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-4-Image-10.jpg"  data-trigger="focus" class="img-responsive"><p>Queen Angelfish - Juvenile</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-4-Image-11.jpg"  data-trigger="focus" class="img-responsive"><p>Blue Angelfish - Juvenile</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-18.jpg"  data-trigger="focus" class="img-responsive"><p>French Angelfish</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-17.jpg"  data-trigger="focus" class="img-responsive"><p>French Angelfish - Juvenile</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-19.jpg"  data-trigger="focus" class="img-responsive"><p>Gray Angelfish</p></div>
+	 <div class="col-md-3 col-xs-4" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?"><img src="../aqua-acr/images/Page-6-Image-20.jpg"  data-trigger="focus" class="img-responsive"><p>Gray Angelfish - Juvenile</p></div>
 </div> <h2 id="sec2">Butterflyfish</h2><div class="row">	
 	 <div class="col-md-3 col-xs-4"><img src="../aqua-acr/images/Page-36-Image-158.jpg" class="img-responsive"><p>Foureyed Butterflyfish</p></div>
 	 <div class="col-md-3 col-xs-4"><img src="../aqua-acr/images/Page-38-Image-164.jpg" class="img-responsive"><p>Reef Butterflyfish</p></div>
@@ -337,8 +337,12 @@ body {
         
         $(document).ready(function() {
         
-$('[data-toggle="tooltip"]').tooltip()
-$('[data-toggle="popover"]').popover()
+$('[data-toggle="tooltip"]').tooltip({
+	placement: bottom
+})
+$('[data-toggle="popover"]').popover({
+	placement: bottom
+})
 
             /* activate sidebar */
 $('#sidebar').affix({
