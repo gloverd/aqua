@@ -1,13 +1,13 @@
 $(document).ready(function(){
     /*onload*/
-    $('div.row > div').removeClass();
-    $('div.row > div').addClass('div-shuffle div-col-md');
-    $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
+    $('div.col-md-9 > div').removeClass();
+    $('div.col-md-9 > div').addClass('div-shuffle div-col-md');
+    $('div.col-md-9 > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
     $('.caption').addClass('caption-show');
     
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
-        $(".row").each(function(){
+        $(".col-md-9").each(function(){
             var divs = $(this).find('.div-shuffle');
             for(var i = 0; i < divs.length; i++) $(divs[i]).remove();            
             //the fisher yates algorithm, from http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
