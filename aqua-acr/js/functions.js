@@ -1,8 +1,8 @@
 $(document).ready(function(){
     /*onload*/
-    $('.col-md-9 > div').removeClass();
-    $('.col-md-9 > div').addClass('div-shuffle div-col-md');
-    $('.col-md-9 > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
+    $('div.row > div').removeClass();
+    $('div.row > div').addClass('div-shuffle div-col-md');
+    $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
     $('.caption').addClass('caption-show');
     
     $(".btn-shuffle").bind('click', shuffle);        
@@ -40,47 +40,45 @@ $(document).ready(function(){
     });
     
     $('.btn-grid-sm').click(function(){
-      if ($('.col-md-9 > div').hasClass('div-col-sm')) {
+      if ($('div.row > div').hasClass('div-col-sm')) {
             //doSomething();
         } else {      
-            $('.col-md-9 > div').removeClass();
-            $('.col-md-9 > div').addClass('div-shuffle div-col-sm');
-            $('.col-md-9 > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-sm');
+            $('div.row > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
         }
     });
     $('.btn-grid-md').click(function(){
-      if ($('.col-md-9 > div').hasClass('div-col-md')) {
+      if ($('div.row > div').hasClass('div-col-md')) {
             //doSomething();
         } else {      
-            $('.col-md-9 > div').removeClass();
-            $('.col-md-9 > div').addClass('div-shuffle div-col-md');
-            $('.col-md-9 > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-md');
+            $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
         }
     });
     $('.btn-grid-lg').click(function(){
-      if ($('.col-md-9 > div').hasClass('div-col-lg')) {
+      if ($('div.row > div').hasClass('div-col-lg')) {
             //doSomething();
         } else {      
-            $('.col-md-9 > div').removeClass();
-            $('.col-md-9 > div').addClass('div-shuffle div-col-lg');
-            $('.col-md-9 > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-lg');
+            $('div.row > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
         }
     });
     
     $('.btn-grid-lg').click(function(){
-      if ($('.col-md-9 > div').hasClass('div-col-lg')) {
+      if ($('div.row > div').hasClass('div-col-lg')) {
             //doSomething();
         } else {      
-            $('.col-md-9 > div').removeClass();
-            $('.col-md-9 > div').addClass('div-shuffle div-col-lg');
-            $('.col-md-9 > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
+            $('div.row > div').removeClass();
+            $('div.row > div').addClass('div-shuffle div-col-lg');
+            $('div.row > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
         }
     });
-
-
   
-);
 
   
 });
+
 
