@@ -17,139 +17,243 @@
         <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
        <!-- CSS code from Bootply.com editor -->
-	<style type="text/css">
-	body {  padding-top: 50px; }
-	a {text-decoration: none !important;color:#428bca;}
-	a:hover {color:#428bca;}
-	.divWrapper {position:absolute;     top:0px;     padding-top:50%;     padding-bottom:50%;     height:0px;}
-	.myDiv {position: relative;  z-index: 5;  color: #000;  font-size: 400%;  height:200px;  padding-bottom:20px;}
-	.bg-f {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: 1;  width: 350px;  height: 90%;}
-	.label-text {padding-top: 40px;}
-	.myDiv .bg {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: .1;    width: 350px;    height: 90%;}z
-	@media screen and (min-width: 768px) {	}
-	@media screen and (max-width: 590px) {.col-xs-4 {height:120px;margin-bottom:30px;}}
-	@media screen and (max-width: 400px) {.col-xs-4 {height:100px;margin-bottom:30px;}}
-	@media (min-width: 979px	     {	}
-	</style>
+        <style type="text/css">
+  img {width:100%;max-height:140px;}
+  body {padding-top:50px;}
+  #masthead {min-height:150px;}
+  #masthead h1 {font-size: 30px;line-height: 1;padding-top:20px;}
+  #masthead .well {margin-top:8%;}
+  #sidebar li.active {border:0 #eee solid;border-right-width:15px;}
+  .col-md-3 p {height: 40px;}
+  .col-md-3 {height: 140px;margin-bottom: 15px;}
+  .navbar-bright {background-color:#111155;color:#fff;}
+  .affix-top,.affix{position: static;}
+  @media screen and (min-width: 768px) {
+    #masthead h1 {font-size: 50px;}
+  }
+  @media screen and (max-width: 590px) {
+  .col-xs-4 {height:120px;margin-bottom:30px;}
+  }
+  @media screen and (max-width: 400px) {
+  .col-xs-4 {height:100px;margin-bottom:30px;}
+  }
+  @media (min-width: 979px) {
+    #sidebar.affix-top {position: static;margin-top:30px;width:228px;}
+    #sidebar.affix {position: fixed;top:70px;width:228px;}
+  }
+  </style>
     </head>
     
     <!-- HTML code from Bootply.com editor -->
-    <body>
-
-<div class="page-container">
-  
-	<!-- top navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-       <div class="container">
-    	<div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="http://aqua.glover.it/">Home</a>
-    	</div>
-         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
-            <li class="active" ><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
-            <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-       </div>
+    <body  >
+        
+<nav class="navbar navbar-default navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand" style="color:black;font-weight:bold !important;">aqua.glover.it</a>
     </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+    <ul class="nav nav-stacked hidden-sm hidden-md hidden-lg">
+  <li><a href="#sec1">Angelfish</a></li>
+  <li><a href="#sec2">Butterflyfish</a></li>
+  <li><a href="#sec3">Damselfish</a></li>
+  <li><a href="#sec4">Drum</a></li>
+  <li><a href="#sec5">Grouper</a></li>
+  <li><a href="#sec6">Grunt</a></li>
+  <li><a href="#sec7">Hamlet-Seabass</a></li>
+  <li><a href="#sec8">Misc</a></li>
+  <li><a href="#sec9">Notable</a></li>
+  <li><a href="#sec10">Parrotfish</a></li>
+  <li><a href="#sec11">Porcuppinefish</a></li>
+  <li><a href="#sec12">Squirrelfish</a></li>
+  <li><a href="#sec13">Surgeonfish</a></li>
+  <li><a href="#sec14">Wrasse</a></li>
+      </ul>
       
-    <div class="container">
-      <div class="row row-offcanvas row-offcanvas-left">
-         	
-        <!-- main area -->
-        <div class="col-xs-12 col-sm-12">
-          <h1>Welcome to AQUA-ACR</h1>
-          
-          <div class="myDiv col-md-4"><a href="Angelfish.html">
+      <ul class="nav navbar-nav">
+        <li><a href="#masthead">Back to Top</a></li>
+        <li class="active"><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
+        <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
+        <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
+      </ul>
+    </nav>
+    
+  </div>
+</nav>
+
+<div id="masthead">  
+  <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>AQUA-ACR
+            <p class="lead">Atlantic Coral Reef</p>
+          </h1>
+        </div>
+      </div> 
+  </div><!--/container-->
+</div><!--/masthead-->
+
+<!--main-->
+<div class="container">
+  <div class="row">
+      <!--left-->
+      <div class="col-md-3 hidden-sm hidden-xs" id="leftCol">
+        <ul class="nav nav-stacked" id="sidebar">
+  <li><a href="#sec1">Angelfish</a></li>
+  <li><a href="#sec2">Butterflyfish</a></li>
+  <li><a href="#sec3">Damselfish</a></li>
+  <li><a href="#sec4">Drum</a></li>
+  <li><a href="#sec5">Grouper</a></li>
+  <li><a href="#sec6">Grunt</a></li>
+  <li><a href="#sec7">Hamlet-Seabass</a></li>
+  <li><a href="#sec8">Misc</a></li>
+  <li><a href="#sec9">Notable</a></li>
+  <li><a href="#sec10">Parrotfish</a></li>
+  <li><a href="#sec11">Porcuppinefish</a></li>
+  <li><a href="#sec12">Squirrelfish</a></li>
+  <li><a href="#sec13">Surgeonfish</a></li>
+  <li><a href="#sec14">Wrasse</a></li>
+        </ul>
+      </div><!--/left-->
+      
+      <!--right-->
+      <div class="col-md-9">
+        
+        <h2 id="sec0">Fish Identification</h2>
+        <p>
+          101 animals spread out over 14 families. Please use the menu above/to the left to skip to a specific family.
+        </p>
+        
+        <hr>
+        
+        <!-- add to main div for popover-->
+        <!--data-toggle="popover" data-placement="bottom" title="Title" data-content="Content"-->
+
+<div class="myDiv col-md-3"><a href="Angelfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0011_Layer 1.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Angelfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Butterflyfish.html">
+ <div class="myDiv col-md-3"><a href="Butterflyfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0010_Layer 2.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Butterflyfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Damselfish.html">
+ <div class="myDiv col-md-3"><a href="Damselfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0009_Layer 3.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Damselfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Drum.html">
+ <div class="myDiv col-md-3"><a href="Drum.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0008_Layer 4.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Drum</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Grouper.html">
+ <div class="myDiv col-md-3"><a href="Grouper.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0007_Layer 5.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Grouper</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Hamlet-Seabass.html">
+ <div class="myDiv col-md-3"><a href="Hamlet-Seabass.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0006_Layer 6.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Hamlet-Seabass</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Misc.html">
+ <div class="myDiv col-md-3"><a href="Misc.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0005_Layer 7.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Misc</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Notable.html">
+ <div class="myDiv col-md-3"><a href="Notable.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0004_Layer 8.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Notable</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Porcuppinefish.html">
+ <div class="myDiv col-md-3"><a href="Porcuppinefish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('images/Page-32-Image-137.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Porcuppinefish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Parrotfish.html">
+ <div class="myDiv col-md-3"><a href="Parrotfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0003_Layer 9.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Parrotfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="angelfish.html">
+ <div class="myDiv col-md-3"><a href="angelfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0002_Layer 10.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Grunt</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Squirrelfish.html">
+ <div class="myDiv col-md-3"><a href="Squirrelfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('images/Page-40-Image-173.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Squirrelfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Surgeonfish.html">
+ <div class="myDiv col-md-3"><a href="Surgeonfish.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0001_Layer 11.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Surgeonfish</h1></div></a>
 </div>
- <div class="myDiv col-md-4"><a href="Wrasse.html">
+ <div class="myDiv col-md-3"><a href="Wrasse.html">
     <div class="bg-f" style="background: #fff;"></div>
     <div class="bg" style="background: url('indexcards/header_0000_Layer 12.jpg') right bottom no-repeat;"></div>
     <div class="label-text"><h1>Wrasse</h1></div></a>
 </div>
 
-          
-          
-        </div><!-- /.col-xs-12 main -->
-    </div><!--/.row-->
-  </div><!--/.container-->
-</div><!--/.page-container-->
+        
+        <hr>
+        <!--<h4><a href="http://aqua.org">Aqua.org</a></h4>-->
+        <hr>
 
+        </div><!--/right-->
+    </div><!--/row-->
+</div><!--/container-->
 
-
-
-
-	<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<!-- JavaScript jQuery code from Bootply.com editor  -->
+<script type='text/javascript'>
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="popover"]').popover()
+  
+  /* activate sidebar */
+  $('#sidebar').affix({
+    offset: {
+      top: 135
+    }
+  });
+  
+  /* activate scrollspy menu */
+  var $body   = $(document.body);
+  var navHeight = $('.navbar').outerHeight(true) + 10;
+  $body.scrollspy({
+    target: '#leftCol',
+    offset: navHeight
+  });
+  
+  /* smooth scrolling sections */
+  $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000);
+          return false;
+        }
+      }
+  });
+});
+</script>
 
     </body>
 </html>
