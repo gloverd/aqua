@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     $(".btn-shuffle").bind('click', shuffle);        
     function shuffle(){
-        $(".col-md-9").each(function(){
+        $(".row").each(function(){
             var divs = $(this).find('.div-shuffle');
             for(var i = 0; i < divs.length; i++) $(divs[i]).remove();            
             //the fisher yates algorithm, from http://stackoverflow.com/questions/2450954/how-to-randomize-a-javascript-array
@@ -76,3 +76,11 @@ $(document).ready(function(){
             $('.col-md-9 > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
         }
     });
+
+
+  
+);
+
+  
+});
+
