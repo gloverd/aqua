@@ -45,7 +45,7 @@ $(document).ready(function(){
         } else {      
             $('div.col-md-9 > div').removeClass();
             $('div.col-md-9 > div').addClass('div-shuffle div-col-sm');
-            $('div.col-md-9 > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
+            $('div.col-md-9 > div').addClass('col-lg-3 col-xs-2 col-xs-3  col-xs-3');
         }
     });
     $('.btn-grid-md').click(function(){
