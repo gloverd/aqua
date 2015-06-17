@@ -40,40 +40,40 @@ $(document).ready(function(){
     });
     
     $('.btn-grid-sm').click(function(){
-      if ($('div.row > div').hasClass('div-col-sm')) {
+      if ($('div.col-md-9 > div').hasClass('div-col-sm')) {
             //doSomething();
         } else {      
-            $('div.row > div').removeClass();
-            $('div.row > div').addClass('div-shuffle div-col-sm');
-            $('div.row > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
+            $('div.col-md-9 > div').removeClass();
+            $('div.col-md-9 > div').addClass('div-shuffle div-col-sm');
+            $('div.col-md-9 > div').addClass('col-lg-2 col-xs-2 col-xs-2  col-xs-3');
         }
     });
     $('.btn-grid-md').click(function(){
-      if ($('div.row > div').hasClass('div-col-md')) {
+      if ($('div.col-md-9 > div').hasClass('div-col-md')) {
             //doSomething();
         } else {      
-            $('div.row > div').removeClass();
-            $('div.row > div').addClass('div-shuffle div-col-md');
-            $('div.row > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
+            $('div.col-md-9 > div').removeClass();
+            $('div.col-md-9 > div').addClass('div-shuffle div-col-md');
+            $('div.col-md-9 > div').addClass('col-lg-4 col-md-4 col-sm-4  col-xs-4');
         }
     });
     $('.btn-grid-lg').click(function(){
-      if ($('div.row > div').hasClass('div-col-lg')) {
+      if ($('div.col-md-9 > div').hasClass('div-col-lg')) {
             //doSomething();
         } else {      
-            $('div.row > div').removeClass();
-            $('div.row > div').addClass('div-shuffle div-col-lg');
-            $('div.row > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
+            $('div.col-md-9 > div').removeClass();
+            $('div.col-md-9 > div').addClass('div-shuffle div-col-lg');
+            $('div.col-md-9 > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
         }
     });
     
     $('.btn-grid-lg').click(function(){
-      if ($('div.row > div').hasClass('div-col-lg')) {
+      if ($('div.col-md-9 > div').hasClass('div-col-lg')) {
             //doSomething();
         } else {      
-            $('div.row > div').removeClass();
-            $('div.row > div').addClass('div-shuffle div-col-lg');
-            $('div.row > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
+            $('div.col-md-9 > div').removeClass();
+            $('div.col-md-9 > div').addClass('div-shuffle div-col-lg');
+            $('div.col-md-9 > div').addClass('col-lg-6 col-md-6 col-sm-12 col-xs-12');
         }
     });
   
