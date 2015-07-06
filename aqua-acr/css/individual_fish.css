@@ -22,6 +22,8 @@ body {padding-top:50px;}
 @media screen and (min-width: 768px) {#masthead h1 {font-size: 50px;}}
 @media screen and (max-width: 590px) {.col-xs-4 {height:120px;margin-bottom:30px;}}
 @media screen and (max-width: 400px) {.col-xs-4 {height:80px;margin-bottom:10px;}
+
+.col-xs-4 .thumbnail {height:120px;}
 .col-xs-4 h4 {font-size: 12px}}
 @media (min-width: 979px) {#sidebar.affix-top {position: static;margin-top:30px;width:228px;}
 #sidebar.affix {position: fixed;top:70px;width:228px;}}
