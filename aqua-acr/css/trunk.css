@@ -61,7 +61,7 @@ div.row div.col-md-6 div.caption {height: 45px;overflow: visible;}
 div.thumbnail:hover .info {position: relative;top: -157px;color: #000;visibility: visible;background-color: rgba(255,255,255,0.8);
 .thumbnail {overflow:hidden !important;}
 */
-div.row div.col-md-6 div.caption, div.row div.col-md-4 div.caption { height:200px;}
+div.row div.col-md-6 div.caption, div.row div.col-md-4 div.caption { height:200px; line-height:1.2;}
 
 
 
