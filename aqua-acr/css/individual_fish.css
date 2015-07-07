@@ -11,7 +11,7 @@ ul ul li a {padding-left: 20px;}
 
 img {width:100%;max-height:140px;}
 body {padding-top:50px;}
-#masthead {min-height:150px;}
+#masthead {min-height:100px;}
 #masthead h1 {font-size: 30px;line-height: 1;padding-top:20px;}
 #masthead .well {margin-top:8%;}
 #sidebar li.active {border:0 #eee solid;border-right-width:15px;}
@@ -26,7 +26,8 @@ p.info-line2 {margin-top: -10px;}
 
 .col-xs-4 .thumbnail {max-height:120px;}
 .col-xs-4 h4 {font-size: 12px}
-  
-}
+ 
+ .col-md-6, .col-lg-6,.col-xs-12, .col-sm-12 {
+  padding-left: 5px; padding-right: 5px; }
 @media (min-width: 979px) {#sidebar.affix-top {position: static;margin-top:30px;width:228px;}
 #sidebar.affix {position: fixed;top:70px;width:228px;}}
