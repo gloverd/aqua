@@ -17,45 +17,15 @@
         <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
         <!-- Scripts -->  
-        <script type="text/javascript"> 
-          if (typeof jQuery == 'undefined') 
-            document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E")) 
-        </script> 
+        <script type="text/javascript"> if (typeof jQuery == 'undefined') document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))</script>  
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
         <script type="text/javascript" language="javascript" src="js/functions.js"></script>  
-
-        <!-- StyleSheets -->  
-
-        <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />  
-       <!-- CSS code from Bootply.com editor -->
-        <style type="text/css">
         
-            ul ul li:hover {background-color: lightgray;}
-    ul ul li {padding: 5px 0px 5px 0px;list-style: none;}
-    ul ul > li {margin-top: 10px;margin-bottom: 5px;}
-    ul ul {  list-style: inherit;  margin-left: -20px;}
-    ul ul li a {padding-left: 20px;}
-  .divWrapper {position:absolute;     top:0px;     padding-top:50%;     padding-bottom:50%;     height:0px;}
-  .myDiv {position: relative;  z-index: 5;  color: #000;  font-size: 400%;  height:200px;  padding-bottom:20px;}
-  .bg-f {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: 1;  width: 350px;  height: 90%;}
-  .label-text {padding-top: 40px;}
-  .myDiv .bg {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: .1;    width: 350px;    height: 90%;}z
-
-  img {width:100%;max-height:140px;}
-  body {padding-top:50px;}
-  #masthead {min-height:150px;}
-  #masthead h1 {font-size: 30px;line-height: 1;padding-top:20px;}
-  #masthead .well {margin-top:8%;}
-  #sidebar li.active {border:0 #eee solid;border-right-width:15px;}
-  .col-md-3 p {height: 40px;}
-  .col-md-3 {height: 140px;margin-bottom: 15px;}
-  .navbar-bright {background-color:#111155;color:#fff;}
-  .affix-top,.affix{position: static;}
-  @media screen and (min-width: 768px) {#masthead h1 {font-size: 50px;}}
-  @media screen and (max-width: 590px) {.col-xs-4 {height:120px;margin-bottom:30px;}}
-  @media screen and (max-width: 400px) {.col-xs-4 {height:100px;margin-bottom:30px;}}
-  @media (min-width: 979px) {#sidebar.affix-top {position: static;margin-top:30px;width:228px;}
-    #sidebar.affix {position: fixed;top:70px;width:228px;}}
-  </style>
+        <!-- StyleSheets -->  
+        <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />  
+        <link rel="stylesheet" type="text/css" media="all" href="css/individual_fish.css" />  
     </head>
     
     <!-- HTML code from Bootply.com editor -->
@@ -66,97 +36,91 @@
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </button>
       <a href="#" class="navbar-brand" style="color:black;font-weight:bold !important;">aqua.glover.it</a>
+      
+      <div class="hidden-sm hidden-md hidden-lg">
+            <div class="btn-toolbar" role="toolbar" aria-label="..." style="padding-top:10px;">
+            <div class="btn-group" role="group" aria-label="...">
+                <a class="btn btn-primary btn-sm btn-grid-md" href="javascript:void(0);" ><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>  
+                <a class="btn btn-primary btn-sm btn-grid-lg" href="javascript:void(0);" ><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></a>  
+                <a class="btn btn-primary btn-sm btn-show-info" href="javascript:void(0);"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>      
+                <a class="btn btn-primary btn-sm btn-shuffle" href="javascript:void(0);"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>  
+            </div>
+            </div>
+      </div>
+      
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
     <ul class="nav nav-stacked hidden-sm hidden-md hidden-lg">
-  <li><a href="./AllFish.html">All Fish</a></li>
-  <li><a href="./Angelfish.html">Angelfish</a></li>
-  <li><a href="./Butterflyfish.html">Butterflyfish</a></li>
-  <li><a href="./Damselfish.html">Damselfish</a></li>
-  <li><a href="./Drum.html">Drum</a></li>
-  <li><a href="./Grouper.html">Grouper</a></li>
-  <li><a href="./Grunt.html">Grunt</a></li>
-  <li><a href="./Hamlet-Seabass">Hamlet-Seabass</a></li>
-  <li><a href="./Misc.html">Misc</a></li>
-  <li><a href="./Notable.html">Notable</a></li>
-  <li><a href="./Parrotfish.html">Parrotfish</a></li>
-  <li><a href="./Porcuppinefish.html">Porcuppinefish</a></li>
-  <li><a href="./Squirrelfish.html">Squirrelfish</a></li>
-  <li><a href="./Surgeonfish.html">Surgeonfish</a></li>
-  <li><a href="./Wrasse.html">Wrasse</a></li>
-      </ul>
-      
-      <ul class="nav navbar-nav">
-        <li><a href="#masthead">Back to Top</a></li>
-        <li class="active"><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
-        <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
-        <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
-      </ul>
+      <li><a href="./AllFish.html">All Fish</a></li>
+      <li><a href="./Angelfish.html">Angelfish</a></li>
+      <li><a href="./Butterflyfish.html">Butterflyfish</a></li>
+      <li><a href="./Damselfish.html">Damselfish</a></li>
+      <li><a href="./Drum.html">Drum</a></li>
+      <li><a href="./Grouper.html">Grouper</a></li>
+      <li><a href="./Grunt.html">Grunt</a></li>
+      <li><a href="./Hamlet-Seabass">Hamlet-Seabass</a></li>
+      <li><a href="./Misc.html">Misc</a></li>
+      <li><a href="./Notable.html">Notable</a></li>
+      <li><a href="./Parrotfish.html">Parrotfish</a></li>
+      <li><a href="./Porcuppinefish.html">Porcuppinefish</a></li>
+      <li><a href="./Squirrelfish.html">Squirrelfish</a></li>
+      <li><a href="./Surgeonfish.html">Surgeonfish</a></li>
+      <li><a href="./Wrasse.html">Wrasse</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#masthead">Back to Top</a></li>
+      <li class="active"><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
+      <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
+      <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
+    </ul>
     </nav>
     
   </div>
 </nav>
 
-<div id="masthead">  
-  <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h1>AQUA-ACR
-            <p class="lead">Atlantic Coral Reef</p>
-          </h1>
-        </div>
-      </div> 
-  </div><!--/container-->
-</div><!--/masthead-->
+<div id="masthead"><div class="container"><div class="row"><div class="col-md-7">
+      <h1>AQUA-ACR
+        <p class="lead">Atlantic Coral Reef</p>
+      </h1>
+</div></div></div></div><!--/masthead and container-->
 
 <!--main-->
 <div class="container">
   <div class="row">
       <!--left-->
-      <div class="col-md-3 hidden-sm hidden-xs" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-            
+      <div class="col-md-3 hidden-sm hidden-xs" id="leftCol"><ul class="nav nav-stacked" id="sidebar">
+            <!--Buttons-->
             <div class="btn-toolbar" role="toolbar" aria-label="...">
-              <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
                 <a class="btn btn-primary btn-large btn-grid-sm" href="javascript:void(0);" ><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a> 
                 <a class="btn btn-primary btn-large btn-grid-md" href="javascript:void(0);" ><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>  
                 <a class="btn btn-primary btn-large btn-grid-lg" href="javascript:void(0);" ><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></a>  
-              </div>
-              <div class="btn-group" role="group" aria-label="...">
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
                 <a class="btn btn-primary btn-large btn-show-info" href="javascript:void(0);"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>     
                 <a class="btn btn-primary btn-large btn-shuffle" href="javascript:void(0);"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>  
-              </div>
             </div>
-            
-  <li><a href="http://aqua.glover.it/aqua-acr/AllFish.html">All Fish</a></li>
-  <li class="active"><a href="#sec5">Grouper</a></li>
-  <ul>
-    <li><a href="#Grouper34">Rockhind</a></li>
-    <li><a href="#Grouper35">Black Grouper</a</li>
-    <li><a href="#Grouper36">Coney (Grouper)</a></li>
-    <li><a href="#Grouper37">Grasby</a></li>
-    <li><a href="#Grouper38">Grasby - Juvenile</a></li>
-    <li><a href="#Grouper39">Scamp (Grouper)</a></li>
-  </ul>
-        </ul>
-      </div><!--/left-->
+            </div>
+            <!--MenuList-->
+            <li><a href="./AllFish.html">All Fish</a></li>
+            <li class="active"><a href="#sec0">Grouper</a></li>
+            <ul>
+                <li><a href="#Grouper34">Rockhind</a></li>
+                <li><a href="#Grouper35">Black Grouper</a></li>
+                <li><a href="#Grouper36">Coney (Grouper)</a></li>
+                <li><a href="#Grouper37">Grasby</a></li>
+                <li><a href="#Grouper38">Grasby - Juvenile</a></li>
+                <li><a href="#Grouper39">Scamp (Grouper)</a></li>
+            </ul>
+      </ul></div>
+      <!--/left-->
       
       <!--right-->
-      <div class="col-md-9">
+      <div class="col-md-9"><h2 id="sec0">Grouper</h2><hr>
         
-        <h2 id="sec0">Grouper</h2>
-
-        <hr>
-        
-        <!-- add to main div for popover-->
-        <!--data-toggle="popover" data-placement="bottom" title="Title" data-content="Content"-->
-        
-
 <!-- Grouper -->  
   <div class="div-shuffle" id="Grouper34"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-11-Image-37.jpg');"></div><div class="caption"><h4>Rockhind</h4><p class="info info-size">Grouper</p><p class="info info-line1">Black saddle spot on base of tail. Reddish to dark dots cover the body and all fins. One to four pale or dark blotches along back below dorsal fin.</p><p class="info info-line2">May have additional thin strips on body. Fins are pale. Black spot on base of tail (not always present)</p></div></div></div>
   <div class="div-shuffle" id="Grouper35"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-25-Image-107.jpg');"></div><div class="caption"><h4>Black Grouper</h4><p class="info info-size">Grouper</p><p class="info info-line1">Normally reddish-brown to black. Can pale or darken until markings are indistinct. Tin pale to yellow margin on pectoral fins.</p><p class="info info-line2">Ends of rectangular blotches on upper body are nearly square. Tail has wide black margin, with thin white edge.</p></div></div></div>
@@ -166,49 +130,10 @@
   <div class="div-shuffle" id="Grouper39"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-27-Image-112.jpg');"></div><div class="caption"><h4>Scamp (Grouper)</h4><p class="info info-size">Grouper/Seabass</p><p class="info info-line1">Light tan to brown but can darken quickly. Dark body spots tend to form broken stripes and rectangullar splotches.</p><p class="info info-line2">Dusky tail has pale margin.</p></div></div></div>
 
 
-        </div><!--/right-->
-    </div><!--/row-->
-</div><!--/container-->
 
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-<!-- JavaScript jQuery code from Bootply.com editor  -->
-<script type='text/javascript'>
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
-  
-  /* activate sidebar */
-  $('#sidebar').affix({
-    offset: {
-      top: 135
-    }
-  });
-  
-  /* activate scrollspy menu */
-  var $body   = $(document.body);
-  var navHeight = $('.navbar').outerHeight(true) + 10;
-  $body.scrollspy({
-    target: '#leftCol',
-    offset: navHeight
-  });
-  
-  /* smooth scrolling sections */
-  $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - 50
-          }, 1000);
-          return false;
-        }
-      }
-  });
-});
-</script>
 
-    </body>
-</html>
+      </div>
+      <!--/right-->
+    
+</div></div><!--/row--><!--/container-->
+</body></html> <!--end of page-->
