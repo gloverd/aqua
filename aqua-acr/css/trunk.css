@@ -84,6 +84,8 @@ div.row div.div-col-md div.caption-show h4 {visibility:visible !important; displ
 /*div.row div.caption {visibility:hidden !important;display:none !important;}
 div.row div.col-xs-12 div.caption {visibility:visible !important; display:block !important; margin: 0px;}*/
 
+div.row div.col-md-6 div.caption, div.row div.col-md-4 div.caption { height:130px; line-height:1.2;}
+
 div.thumbnail {padding:0px; margin-bottom:5px;}
 div.col-xs-12 div.thumbnail {padding:0px; margin-bottom:15px;}
 
