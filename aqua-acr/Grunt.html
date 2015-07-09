@@ -16,46 +16,16 @@
         <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
 
-        <!-- Scripts -->	
-        <script type="text/javascript">	
-          if (typeof jQuery == 'undefined')	
-            document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))	
-        </script>	
-        <script type="text/javascript" language="javascript" src="js/functions.js"></script>	
-
-        <!-- StyleSheets -->	
-
-        <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />	
-       <!-- CSS code from Bootply.com editor -->
-        <style type="text/css">
+        <!-- Scripts -->  
+        <script type="text/javascript"> if (typeof jQuery == 'undefined') document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + "type='text/javascript'%3E%3C/script%3E"))</script>  
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+        <script type="text/javascript" language="javascript" src="js/functions.js"></script>  
         
-            ul ul li:hover {background-color: lightgray;}
-    ul ul li {padding: 5px 0px 5px 0px;list-style: none;}
-    ul ul > li {margin-top: 10px;margin-bottom: 5px;}
-    ul ul {  list-style: inherit;  margin-left: -20px;}
-    ul ul li a {padding-left: 20px;}
-  .divWrapper {position:absolute;     top:0px;     padding-top:50%;     padding-bottom:50%;     height:0px;}
-  .myDiv {position: relative;  z-index: 5;  color: #000;  font-size: 400%;  height:200px;  padding-bottom:20px;}
-  .bg-f {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: 1;  width: 350px;  height: 90%;}
-  .label-text {padding-top: 40px;}
-  .myDiv .bg {  position: absolute;  z-index: -1;  top: 0;  bottom: 0;  left: 0;  right: 0;  background: url(//g) center center;  opacity: .1;    width: 350px;    height: 90%;}z
-
-  img {width:100%;max-height:140px;}
-  body {padding-top:50px;}
-  #masthead {min-height:150px;}
-  #masthead h1 {font-size: 30px;line-height: 1;padding-top:20px;}
-  #masthead .well {margin-top:8%;}
-  #sidebar li.active {border:0 #eee solid;border-right-width:15px;}
-  .col-md-3 p {height: 40px;}
-  .col-md-3 {height: 140px;margin-bottom: 15px;}
-  .navbar-bright {background-color:#111155;color:#fff;}
-  .affix-top,.affix{position: static;}
-  @media screen and (min-width: 768px) {#masthead h1 {font-size: 50px;}}
-  @media screen and (max-width: 590px) {.col-xs-4 {height:120px;margin-bottom:30px;}}
-  @media screen and (max-width: 400px) {.col-xs-4 {height:100px;margin-bottom:30px;}}
-  @media (min-width: 979px) {#sidebar.affix-top {position: static;margin-top:30px;width:228px;}
-    #sidebar.affix {position: fixed;top:70px;width:228px;}}
-  </style>
+        <!-- StyleSheets -->  
+        <link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />  
+        <link rel="stylesheet" type="text/css" media="all" href="css/individual_fish.css" />  
     </head>
     
     <!-- HTML code from Bootply.com editor -->
@@ -66,148 +36,104 @@
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </button>
       <a href="#" class="navbar-brand" style="color:black;font-weight:bold !important;">aqua.glover.it</a>
+      
+      <div class="hidden-sm hidden-md hidden-lg">
+            <div class="btn-toolbar" role="toolbar" aria-label="..." style="padding-top:10px;">
+            <div class="btn-group" role="group" aria-label="...">
+                <a class="btn btn-primary btn-sm btn-grid-md" href="javascript:void(0);" ><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>  
+                <a class="btn btn-primary btn-sm btn-grid-lg" href="javascript:void(0);" ><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></a>  
+                <a class="btn btn-primary btn-sm btn-show-info" href="javascript:void(0);"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>      
+                <a class="btn btn-primary btn-sm btn-shuffle" href="javascript:void(0);"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>  
+            </div>
+            </div>
+      </div>
+      
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
     <ul class="nav nav-stacked hidden-sm hidden-md hidden-lg">
-  <li><a href="./AllFish.html">All Fish</a></li>
-  <li><a href="./Angelfish.html">Angelfish</a></li>
-  <li><a href="./Butterflyfish.html">Butterflyfish</a></li>
-  <li><a href="./Damselfish.html">Damselfish</a></li>
-  <li><a href="./Drum.html">Drum</a></li>
-  <li><a href="./Grouper.html">Grouper</a></li>
-  <li><a href="./Grunt.html">Grunt</a></li>
-  <li><a href="./Hamlet-Seabass">Hamlet-Seabass</a></li>
-  <li><a href="./Misc.html">Misc</a></li>
-  <li><a href="./Notable.html">Notable</a></li>
-  <li><a href="./Parrotfish.html">Parrotfish</a></li>
-  <li><a href="./Porcuppinefish.html">Porcuppinefish</a></li>
-  <li><a href="./Squirrelfish.html">Squirrelfish</a></li>
-  <li><a href="./Surgeonfish.html">Surgeonfish</a></li>
-  <li><a href="./Wrasse.html">Wrasse</a></li>
-      </ul>
-      
-      <ul class="nav navbar-nav">
-        <li><a href="#masthead">Back to Top</a></li>
-        <li class="active"><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
-        <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
-        <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
-      </ul>
+      <li><a href="./AllFish.html">All Fish</a></li>
+      <li><a href="./Angelfish.html">Angelfish</a></li>
+      <li><a href="./Butterflyfish.html">Butterflyfish</a></li>
+      <li><a href="./Damselfish.html">Damselfish</a></li>
+      <li><a href="./Drum.html">Drum</a></li>
+      <li><a href="./Grouper.html">Grouper</a></li>
+      <li><a href="./Grunt.html">Grunt</a></li>
+      <li><a href="./Hamlet-Seabass">Hamlet-Seabass</a></li>
+      <li><a href="./Misc.html">Misc</a></li>
+      <li><a href="./Notable.html">Notable</a></li>
+      <li><a href="./Parrotfish.html">Parrotfish</a></li>
+      <li><a href="./Porcuppinefish.html">Porcuppinefish</a></li>
+      <li><a href="./Squirrelfish.html">Squirrelfish</a></li>
+      <li><a href="./Surgeonfish.html">Surgeonfish</a></li>
+      <li><a href="./Wrasse.html">Wrasse</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#masthead">Back to Top</a></li>
+      <li class="active"><a href="http://aqua.glover.it/aqua-acr/">AQUA-ACR</a></li>
+      <li><a href="http://aqua.glover.it/aqua-btr/">AQUA-BTR</a></li>
+      <li><a href="http://aqua.glover.it/aqua-skl/">AQUA-SKL</a></li>
+    </ul>
     </nav>
     
   </div>
 </nav>
 
-<div id="masthead">  
-  <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-          <h1>AQUA-ACR
-            <p class="lead">Atlantic Coral Reef</p>
-          </h1>
-        </div>
-      </div> 
-  </div><!--/container-->
-</div><!--/masthead-->
+<div id="masthead"><div class="container"><div class="row"><div class="col-md-7">
+      <h1>AQUA-ACR
+        <p class="lead">Atlantic Coral Reef</p>
+      </h1>
+</div></div></div></div><!--/masthead and container-->
 
 <!--main-->
 <div class="container">
   <div class="row">
       <!--left-->
-      <div class="col-md-3 hidden-sm hidden-xs" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-            
+      <div class="col-md-3 hidden-sm hidden-xs" id="leftCol"><ul class="nav nav-stacked" id="sidebar">
+            <!--Buttons-->
             <div class="btn-toolbar" role="toolbar" aria-label="...">
-              <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
                 <a class="btn btn-primary btn-large btn-grid-sm" href="javascript:void(0);" ><span class="glyphicon glyphicon-th" aria-hidden="true"></span></a> 
                 <a class="btn btn-primary btn-large btn-grid-md" href="javascript:void(0);" ><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></a>  
                 <a class="btn btn-primary btn-large btn-grid-lg" href="javascript:void(0);" ><span class="glyphicon glyphicon-stop" aria-hidden="true"></span></a>  
-              </div>
-              <div class="btn-group" role="group" aria-label="...">
-                <a class="btn btn-primary btn-large btn-show-info" href="javascript:void(0);"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>  		
-                <a class="btn btn-primary btn-large btn-shuffle" href="javascript:void(0);"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>  
-              </div>
             </div>
-            
-  <li><a href="./AllFish.html">All Fish</a></li>
-  <li class="active"><a href="#sec6">Grunt</a></li>
-    <ul>
-    <li><a href="#Grunt40">Tomtate</a></li>
-    <li><a href="#Grunt41">Spanish Grunt</a</li>
-    <li><a href="#Grunt42">Bluestriped Grunt</a></li>
-    <li><a href="#Grunt43">French Grunt</a></li>
-    <li><a href="#Grunt44">Porkfish Grunk</a></li>
-    <li><a href="#Grunt45">Smallmouth Grunt</a></li>
-  </ul>
-        </ul>
-      </div><!--/left-->
+            <div class="btn-group" role="group" aria-label="...">
+                <a class="btn btn-primary btn-large btn-show-info" href="javascript:void(0);"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a>     
+                <a class="btn btn-primary btn-large btn-shuffle" href="javascript:void(0);"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>  
+            </div>
+            </div>
+            <!--MenuList-->
+            <li><a href="./AllFish.html">All Fish</a></li>
+            <li class="active"><a href="#sec0">Grunt</a></li>
+            <ul>
+                <li><a href="#Grunt40">Tomtate</a></li>
+                <li><a href="#Grunt41">Spanish Grunt</a></li>
+                <li><a href="#Grunt42">Bluestriped Grunt</a></li>
+                <li><a href="#Grunt43">French Grunt</a></li>
+                <li><a href="#Grunt44">Porkfish Grunt</a></li>
+                <li><a href="#Grunt45">Smallmouth Grunt</a></li>
+            </ul>
+      </ul></div>
+      <!--/left-->
       
       <!--right-->
-      <div class="col-md-9">
+      <div class="col-md-9"><h2 id="sec0">Grunt</h2><hr>
         
-        <h2 id="sec0">Grunt</h2>
+<!-- Grunt -->  
+  <div class="div-shuffle" id="Grunt40"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-11-Image-39.jpg');"></div><div class="caption"><h4>Tomtate</h4><p class="info info-size">Grunt</p><p class="info info-line1">Prominent yellow to bronze strip running from snout through eye to base of tail. Another thinner strip on back.</p><p class="info info-line2">Can pale to almost white or darken dramatically.</p></div></div></div>
+  <div class="div-shuffle" id="Grunt41"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-37-Image-161.jpg');"></div><div class="caption"><h4>Spanish Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Bold black stripes ono upper body; black strip running from eye to tail is especially noticable.</p><p class="info info-line2">Yellow green dorsal lhump, yellow saddle or spot on base of tail. Yellow pectoral fins, and borders on the rear dorsal and tail fins</p></div></div></div>
+  <div class="div-shuffle" id="Grunt42"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-29.jpg');"></div><div class="caption"><h4>Bluestriped Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Dark tail and rear dorsal fin with light margins: other fins yellow.</p><p class="info info-line2">Blue stripes over yellow-gold body.</p></div></div></div>
+  <div class="div-shuffle" id="Grunt43"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-30.jpg');"></div><div class="caption"><h4>French Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Yellow stripes on a white to bluish or yellowish silver background.</p><p class="info info-line2">Yellow stripes below lateral line set on diagonal.</p></div></div></div>
+  <div class="div-shuffle" id="Grunt44"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-31.jpg');"></div><div class="caption"><h4>Porkfish Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Yellow-gold and silver body stripes.</p><p class="info info-line2">Two bold black diagonal bands on head. High back profile</p></div></div></div>
+  <div class="div-shuffle" id="Grunt45"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-32.jpg');"></div><div class="caption"><h4>Smallmouth Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Elongated, cylindrical body. Five or six yellow strips over a silver to silvery-white body.</p><p class="info info-line2">Yellow fins.</p></div></div></div>
 
-        <hr>
-        
-        <!-- add to main div for popover-->
-        <!--data-toggle="popover" data-placement="bottom" title="Title" data-content="Content"-->
-        
 
-<!-- Grunt -->	
-	<div class="div-shuffle" id="Grunt40"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-11-Image-39.jpg');"></div><div class="caption"><h4>Tomtate</h4><p class="info info-size">Grunt</p><p class="info info-line1">Prominent yellow to bronze strip running from snout through eye to base of tail. Another thinner strip on back.</p><p class="info info-line2">Can pale to almost white or darken dramatically.</p></div></div></div>
-	<div class="div-shuffle" id="Grunt41"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-37-Image-161.jpg');"></div><div class="caption"><h4>Spanish Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Bold black stripes ono upper body; black strip running from eye to tail is especially noticable.</p><p class="info info-line2">Yellow green dorsal lhump, yellow saddle or spot on base of tail. Yellow pectoral fins, and borders on the rear dorsal and tail fins</p></div></div></div>
-	<div class="div-shuffle" id="Grunt42"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-29.jpg');"></div><div class="caption"><h4>Bluestriped Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Dark tail and rear dorsal fin with light margins: other fins yellow.</p><p class="info info-line2">Blue stripes over yellow-gold body.</p></div></div></div>
-	<div class="div-shuffle" id="Grunt43"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-30.jpg');"></div><div class="caption"><h4>French Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Yellow stripes on a white to bluish or yellowish silver background.</p><p class="info info-line2">Yellow stripes below lateral line set on diagonal.</p></div></div></div>
-	<div class="div-shuffle" id="Grunt44"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-31.jpg');"></div><div class="caption"><h4>Porkfish Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Yellow-gold and silver body stripes.</p><p class="info info-line2">Two bold black diagonal bands on head. High back profile</p></div></div></div>
-	<div class="div-shuffle" id="Grunt45"><div class="thumbnail"><div class="ratio bl" style="background-image:url('images/Page-9-Image-32.jpg');"></div><div class="caption"><h4>Smallmouth Grunt</h4><p class="info info-size">Grunt</p><p class="info info-line1">Elongated, cylindrical body. Five or six yellow strips over a silver to silvery-white body.</p><p class="info info-line2">Yellow fins.</p></div></div></div>
 
-        </div><!--/right-->
-    </div><!--/row-->
-</div><!--/container-->
 
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-<!-- JavaScript jQuery code from Bootply.com editor  -->
-<script type='text/javascript'>
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
-  
-  /* activate sidebar */
-  $('#sidebar').affix({
-    offset: {
-      top: 135
-    }
-  });
-  
-  /* activate scrollspy menu */
-  var $body   = $(document.body);
-  var navHeight = $('.navbar').outerHeight(true) + 10;
-  $body.scrollspy({
-    target: '#leftCol',
-    offset: navHeight
-  });
-  
-  /* smooth scrolling sections */
-  $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - 50
-          }, 1000);
-          return false;
-        }
-      }
-  });
-});
-</script>
-
-    </body>
-</html>
+      </div>
+      <!--/right-->
+    
+</div></div><!--/row--><!--/container-->
+</body></html> <!--end of page-->
