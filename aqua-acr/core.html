@@ -1,6 +1,4 @@
-/* Paste the code between the dashes below into a .txt file and save it as an .html file. Replace your-device-ID-goes-here with your actual device ID and your-access-token-goes-here with your actual access token.
 
----------------------------
 <!-- Replace your-device-ID-goes-here with your actual device ID
 and replace your-access-token-goes-here with your actual access token-->
 <!DOCTYPE>
@@ -23,5 +21,11 @@ and replace your-access-token-goes-here with your actual access token-->
   </center>
   </body>
 </html>
----------------------------
-*/
+
+
+<form action="https://api.particle.io/v1/devices/48ff6a065067555020172387/led?access_token=5200b5c166cd371e5ba3b6bf32d4e53246890143" method="POST">
+  String to Display:<br>
+  <input type="text" name="scrollstring" value="[enter text]">
+  <br>
+  <input type="submit" value="Submit">
+</form>
