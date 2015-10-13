@@ -14,7 +14,7 @@
 
   <body>
 
-    edited 5:37
+    edited 6:21
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -85,11 +85,9 @@
         var setFunc = "inputText";
         var newString = document.getElementById("textInput").value;
         
-        window.alert(newString);
-        
         var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
-        $.post( requestURL, { params: newValue, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent: " + requestURL + " " + newString;
+        $.post( requestURL, { params: newString, access_token: accessToken });
+         document.getElementById("sent_confirmation").innerHTML = "Sent: " + newString;
         
     }
     
@@ -101,7 +99,7 @@
         
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent: " + requestURL;
+         document.getElementById("sent_confirmation").innerHTML = "Sent: " + newValue;
       }
       
 
