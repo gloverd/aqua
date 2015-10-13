@@ -67,9 +67,12 @@
 
       window.setInterval(function() {
 
+        document.getElementById("status_box").innerHTML = "java textbox";
+        document.getElementById("tstamp").innerHTML = "last edited";
+        
         var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
-        var varName = "current_status";
+        var varName = "current";
 
         requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
         $.getJSON(requestURL, function(json) {
