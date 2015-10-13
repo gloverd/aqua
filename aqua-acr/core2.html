@@ -22,7 +22,7 @@
 
   <body>
 
-    edited 2:57
+    edited 3:28
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -52,14 +52,14 @@
         <div class="jumbotron" sty>
       <div class="container">
         <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-lg-8"><h2>Updating status...</h2></div>
+                    <div class="col-xs-12 col-sm-6 col-lg-8"><h2>Current Status:</h2></div>
                     <div class="col-xs-12 col-sm-6 col-lg-3 pull-right"><h2><small id="tstamp">Updating timestamp...</small></h2></div>
         </div>
         
         <div class="row">
           <div class="col-lg-8">
                 <div class="well" style="padding: 0px;">
-                    <h2 id="status_box" style="margin-top: 0px; padding-top: 10px; padding-left: 20px;">placeholder text.</h2>
+                    <h2 id="status_box" style="margin-top: 0px; padding-top: 10px; padding-left: 20px;">Updating status...</h2>
                 </div>
                     
           </div><!-- /.col-lg-8 -->
@@ -77,12 +77,10 @@
 
       window.setInterval(function() {
 
-        document.getElementById("status_box").innerHTML = "java textbox";
-        document.getElementById("tstamp").innerHTML = "last edited";
-        
         var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var varName = "current";
+        var getFunc = "inputText";
 
         requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
         $.getJSON(requestURL, function(json) {
@@ -95,13 +93,10 @@
     
        function setValue() {
         var newValue = "stop";
-        sparkSetPos(newValue);
-      }
-      
-      function sparkSetPos(newValue) {
 	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
       }
+      
 
       
     </script>
