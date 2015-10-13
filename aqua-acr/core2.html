@@ -38,6 +38,7 @@
               <span class="input-group-btn">
                 <button type="submit" value="Submit" class="btn btn-default" type="button">Display!</button>
               </span>
+              <p id="sent_confirmation"></p>
               </form>
 
 
@@ -84,17 +85,21 @@
 
         requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
         $.getJSON(requestURL, function(json) {
-                 document.getElementById("status_box").innerHTML = "Status: " + json.result + " <end>";
-                 //document.getElementById("status_box").style.fontSize = "28px";
+                 document.getElementById("status_box").innerHTML = json.result;
                  document.getElementById("tstamp").innerHTML = json.coreInfo.last_heard;
                  });
     }, 2000);
     
     
        function setValue() {
+       	var deviceID = "48ff6a065067555020172387";
+        var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
+        var setFunc = "inputText";
         var newValue = "stop";
-	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/" + setFunc + "/";
+        
+	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
+         document.getElementById("sent_confirmation").innerHTML = "Sent: " + newValue;
       }
       
 
