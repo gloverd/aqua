@@ -58,7 +58,7 @@
                     
           </div><!-- /.col-lg-8 -->
            <div class="col-md-3 col-xs-12 pull-right">
-                    <button type="submit" class="btn btn-danger btn-lg col-xs-12" style="padding-top: 10px;" onclick="sendNewValue(stop)">
+                    <button type="submit" class="btn btn-danger btn-lg col-xs-12" style="padding-top: 10px;" onclick="setValue()">
                         <span class="glyphicon glyphicon-remove-sign" style="top: 3px;" aria-hidden="true"></span> STOP SCREEN
                     </button>
         </div><!-- /.col-lg-2 -->
@@ -86,12 +86,17 @@
                  });
     }, 10000);
     
-    function sendNewValue(newValue) {
-    	var sendValue = String(newValue);
-	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/inputText/";
-        $.post( requestURL, { args: sendValue, access_token: accessToken });
-    }
+    
+       function setValue() {
+        var newValue = "stop";
+        sparkSetPos(newValue);
+      }
       
+      function sparkSetPos(newValue) {
+	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/" + setFunc + "/";
+        $.post( requestURL, { params: newValue, access_token: accessToken });
+      }
+
       
     </script>
     
