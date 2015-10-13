@@ -84,6 +84,7 @@
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var setFunc = "inputText";
         var newString = document.getElementById("textInput").value;
+        var newString = newString.toLowerCase();
         
         var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newString, access_token: accessToken });
