@@ -24,7 +24,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Text to Scroll..." name="args" id="text1" value="">
+              <input type="text" class="form-control" placeholder="Text to Scroll..." id="textInput" value="Text to Scroll...">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button" onclick="sendText()">Display!</button>
               </span>
@@ -83,7 +83,9 @@
        	var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var setFunc = "inputText";
-        var newString = document.getElementById('text1').innerHTML;
+        var newString = document.getElementById("textInput").value;
+        
+        window.alert(newString);
         
         var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
