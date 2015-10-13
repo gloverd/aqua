@@ -10,17 +10,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="jumbotron.css" rel="stylesheet">    
     <title>glover.it/core2</title>
-
-    
-    <!-- Custom styles for this template -->
-
-
-
   </head>
 
   <body>
 
-    edited 4:30
+    edited 4:45
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -30,14 +24,11 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="input-group">
-            	              <form action="https://api.particle.io/v1/devices/48ff6a065067555020172387/inputText?access_token=5200b5c166cd371e5ba3b6bf32d4e53246890143" method="POST">
-		
               <input type="text" class="form-control" placeholder="Text to Scroll..." name="args" id="text1" value="">
               <span class="input-group-btn">
-                <button type="submit" value="Submit" class="btn btn-default" type="button">Display!</button>
+                <button class="btn btn-default" type="button" onclick="sendText()">Display!</button>
               </span>
-              <p id="sent_confirmation"></p>
-              </form>
+
 
 
               
@@ -60,13 +51,13 @@
                 <div class="well" style="padding: 0px;">
                     <h2 id="status_box" style="margin-top: 0px; padding-top: 10px; padding-left: 20px;">Updating status...</h2>
                 </div>
-                    
           </div><!-- /.col-lg-8 -->
            <div class="col-md-3 col-xs-12 pull-right">
-                    <button type="submit" class="btn btn-danger btn-lg col-xs-12" style="padding-top: 10px;" onclick="setValue()">
+                    <button type="submit" class="btn btn-danger btn-lg col-xs-12" style="padding-top: 10px;" onclick="stopScreen()">
                         <span class="glyphicon glyphicon-remove-sign" style="top: 3px;" aria-hidden="true"></span> STOP SCREEN
                     </button>
-        </div><!-- /.col-lg-2 -->
+        </div><!-- /.col-md-3 -->
+	<p id="sent_confirmation"></p>
         </div><!-- /.row -->
 
       </div>
@@ -88,8 +79,19 @@
                  });
     }, 2000);
     
+    function sendText() {
+       	var deviceID = "48ff6a065067555020172387";
+        var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
+        var setFunc = "inputText";
+        var newString = document.getElementById('text1').innerHTML;
+        
+        var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
+        $.post( requestURL, { params: newValue, access_token: accessToken });
+         document.getElementById("sent_confirmation").innerHTML = "Sent: " + requestURL + " " + newString;
+        
+    }
     
-       function setValue() {
+       function stopScreen() {
        	var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var setFunc = "inputText";
