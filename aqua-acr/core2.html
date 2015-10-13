@@ -87,8 +87,9 @@
     }, 10000);
     
     function sendNewValue(newValue) {
+    	var sendValue = String(newValue);
 	var requestURL = "https://api.spark.io/v1/devices/" +deviceID + "/inputText/";
-        $.post( requestURL, { params: newValue, access_token: accessToken });
+        $.post( requestURL, { args: sendValue, access_token: accessToken });
     }
       
       
