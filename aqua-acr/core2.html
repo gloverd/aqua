@@ -13,9 +13,6 @@
   </head>
 
   <body>
-
-    edited 8:12
-
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
@@ -29,9 +26,6 @@
                 <button class="btn btn-default" type="button" onclick="sendText()">Display!</button>
               </span>
 
-
-
-              
             </div><!-- /input-group -->
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
@@ -63,8 +57,44 @@
       </div>
     </div>
     
-    <script type="text/javascript">
-
+    
+<div class="container">
+  <div class="row">
+    <h2>Select an animation:</h2>
+  </div>
+      <!-- Example row of columns -->
+      <div class="row">
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Noise</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(1)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Scroll Bar</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(2)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Bounce Bar</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(3)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Fill Single</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(4)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Rows</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(5)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Columns</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(6)">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Fade</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendString(7)">Send to display »</a></p>
+	    </div>
+      </div>
+      
+<script type="text/javascript">
       window.setInterval(function() {
 
         var deviceID = "48ff6a065067555020172387";
@@ -80,76 +110,30 @@
     }, 2000);
     
     function sendText() {
-       	var deviceID = "48ff6a065067555020172387";
-        var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
-        var setFunc = "inputText";
         var newString = document.getElementById("textInput").value;
         var newString = newString.toLowerCase();
-        
-        var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
-        $.post( requestURL, { params: newString, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
-        
+	sendString(newString);
+        document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
     }
     
-       function stopScreen() {
-       	var deviceID = "48ff6a065067555020172387";
-        var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
-        var setFunc = "inputText";
-        var newValue = "stop";
-        
-	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
-        $.post( requestURL, { params: newValue, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent Stop Value: " + newValue;
-      }
+    function stopScreen() {
+        var newString = "stop";
+        sendString(newString);
+	document.getElementById("sent_confirmation").innerHTML = "Sent command: " + newString;
+    }
       
-      function sendAnim(animSelection) {
+    function sendString(string_to_send) {
       	var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var setFunc = "inputText";
-        var newValue = animSelection;
+        var newValue = string_to_send;
         
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent Animation: " + newValue;
-      }
+	document.getElementById("sent_confirmation").innerHTML = "Sent animation: " + newValue;
 
-      
+    }
     </script>
-    
-<div class="container">
-  <div class="row">
-    <h2>Select an animation <small>will run in a loop</small></h2>
-  </div>
-      <!-- Example row of columns -->
-      <div class="row">
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Scroll Bar</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendAnim(1)">Send to display »</a></p>
-	    </div>
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Random Noise</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
-	    </div>
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Scroll Bar</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
-	    </div>
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Scroll Bar</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send to display »</a></p>
-	    </div>
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Random Noise</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
-	    </div>
-	    <div class="col-md-3 col-sm-4 col-xs-6">
-	          <h2>Scroll Bar</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
-	    </div>
-      </div>
-      
-
 
       <hr>
       <footer>
