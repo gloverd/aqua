@@ -14,7 +14,7 @@
 
   <body>
 
-    edited 8:08
+    edited 8:12
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -88,7 +88,7 @@
         
         var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newString, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent: " + newString;
+         document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
         
     }
     
@@ -100,9 +100,19 @@
         
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
-         document.getElementById("sent_confirmation").innerHTML = "Sent: " + newValue;
+         document.getElementById("sent_confirmation").innerHTML = "Sent Stop Value: " + newValue;
       }
       
+      function sendAnim(animSelection) {
+      	var deviceID = "48ff6a065067555020172387";
+        var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
+        var setFunc = "inputText";
+        var newValue = animSelection;
+        
+	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
+        $.post( requestURL, { params: newValue, access_token: accessToken });
+         document.getElementById("sent_confirmation").innerHTML = "Sent Animation: " + newValue;
+      }
 
       
     </script>
@@ -115,18 +125,24 @@
       <div class="row">
 	    <div class="col-md-3 col-sm-4 col-xs-6">
 	          <h2>Scroll Bar</h2>
-	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;;">Send to display »</a></p>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;" onclick="sendAnim(1)">Send to display »</a></p>
 	    </div>
-      </div>
-
-      <div class="row">
 	    <div class="col-md-3 col-sm-4 col-xs-6">
 	          <h2>Random Noise</h2>
 	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
 	    </div>
-      </div>
-      
-            <div class="row">
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Scroll Bar</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Scroll Bar</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send to display »</a></p>
+	    </div>
+	    <div class="col-md-3 col-sm-4 col-xs-6">
+	          <h2>Random Noise</h2>
+	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
+	    </div>
 	    <div class="col-md-3 col-sm-4 col-xs-6">
 	          <h2>Scroll Bar</h2>
 	        <p><a class="btn btn-default" href="#" role="button" style="padding:40px;">Send Scroll Bar »</a></p>
