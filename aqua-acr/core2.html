@@ -95,8 +95,11 @@
       </div>
       
 <script type="text/javascript">
-      window.setInterval(function() {
+	document.addEventListener('DOMContentLoaded', function() {
+	   document.getElementById("textInput").value = "";
+	}, false);
 
+      window.setInterval(function() {
         var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var varName = "current";
