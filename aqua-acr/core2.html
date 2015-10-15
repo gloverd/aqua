@@ -52,7 +52,7 @@
                     </button>
         </div><!-- /.col-md-3 -->
         </div><!-- /.row -->
-        <p id="sent_confirmation">Connecting... 12:41</p>
+        <p id="sent_confirmation">Connecting... 12:50</p>
 
       </div>
     </div>
@@ -95,9 +95,10 @@
       </div>
       
 <script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() {
-	   document.getElementById("textInput").value = "";
-	}, false);
+    document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById("textInput").value = "";
+	setTimeout(clearConfirmation, 2000);
+    }, false);
 
     window.setInterval(function() {
         var deviceID = "48ff6a065067555020172387";
@@ -117,13 +118,14 @@
         var newString = newString.toLowerCase();
 	sendString(newString);
         document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
+        setTimeout(clearConfirmation, 3000);
     }
     
     function stopScreen() {
         var newString = "stop";
         sendString(newString);
 	document.getElementById("sent_confirmation").innerHTML = "Sent command: " + newString;
-	setTimeout(clearConfirmation, 1000);
+	setTimeout(clearConfirmation, 3000);
     }
       
     function sendString(string_to_send) {
@@ -135,11 +137,12 @@
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
 	document.getElementById("sent_confirmation").innerHTML = "Sent animation: " + newValue;
+	setTimeout(clearConfirmation, 3000);
     }
     
     function clearConfirmation() {
-	    document.getElementById("sent_confirmation").innerHTML = "&nbsp;CLEAR";
-	}
+	document.getElementById("sent_confirmation").innerHTML = " &nbsp; ";
+    }
     </script>
 
       <hr>
