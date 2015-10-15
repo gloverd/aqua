@@ -52,7 +52,7 @@
                     </button>
         </div><!-- /.col-md-3 -->
         </div><!-- /.row -->
-        <p id="sent_confirmation"></p>
+        <p id="sent_confirmation"> </p>
 
       </div>
     </div>
@@ -117,12 +117,16 @@
         var newString = newString.toLowerCase();
 	sendString(newString);
         document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
+        delay(1000);
+        document.getElementById("sent_confirmation").innerHTML = " ";
     }
     
     function stopScreen() {
         var newString = "stop";
         sendString(newString);
 	document.getElementById("sent_confirmation").innerHTML = "Sent command: " + newString;
+	delay(1000);
+        document.getElementById("sent_confirmation").innerHTML = " ";
     }
       
     function sendString(string_to_send) {
@@ -134,7 +138,8 @@
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
 	document.getElementById("sent_confirmation").innerHTML = "Sent animation: " + newValue;
-
+	delay(1000);
+        document.getElementById("sent_confirmation").innerHTML = " ";
     }
     </script>
 
