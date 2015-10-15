@@ -52,7 +52,7 @@
                     </button>
         </div><!-- /.col-md-3 -->
         </div><!-- /.row -->
-        <p id="sent_confirmation"> </p>
+        <p id="sent_confirmation">Verifying Connection.</p>
 
       </div>
     </div>
@@ -97,9 +97,10 @@
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function() {
 	   document.getElementById("textInput").value = "";
+	   document.getElementById("sent_confirmation").innerHTML = "&nbsp;";
 	}, false);
 
-      window.setInterval(function() {
+    window.setInterval(function() {
         var deviceID = "48ff6a065067555020172387";
         var accessToken = "5200b5c166cd371e5ba3b6bf32d4e53246890143";
         var varName = "current";
@@ -117,16 +118,14 @@
         var newString = newString.toLowerCase();
 	sendString(newString);
         document.getElementById("sent_confirmation").innerHTML = "Sent Text: " + newString;
-        delay(1000);
-        document.getElementById("sent_confirmation").innerHTML = " ";
+        setTimeout(document.getElementById("sent_confirmation").innerHTML = "&nbsp;";, 1000);
     }
     
     function stopScreen() {
         var newString = "stop";
         sendString(newString);
 	document.getElementById("sent_confirmation").innerHTML = "Sent command: " + newString;
-	delay(1000);
-        document.getElementById("sent_confirmation").innerHTML = " ";
+	setTimeout(document.getElementById("sent_confirmation").innerHTML = "&nbsp;";, 1000);
     }
       
     function sendString(string_to_send) {
@@ -138,8 +137,7 @@
 	var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/";
         $.post( requestURL, { params: newValue, access_token: accessToken });
 	document.getElementById("sent_confirmation").innerHTML = "Sent animation: " + newValue;
-	delay(1000);
-        document.getElementById("sent_confirmation").innerHTML = " ";
+	setTimeout(document.getElementById("sent_confirmation").innerHTML = "&nbsp;";, 1000);
     }
     </script>
 
