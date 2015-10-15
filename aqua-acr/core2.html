@@ -52,7 +52,7 @@
                     </button>
         </div><!-- /.col-md-3 -->
         </div><!-- /.row -->
-        <p id="sent_confirmation">Connecting...</p>
+        <p id="sent_confirmation">Connecting... 12:41</p>
 
       </div>
     </div>
@@ -123,6 +123,7 @@
         var newString = "stop";
         sendString(newString);
 	document.getElementById("sent_confirmation").innerHTML = "Sent command: " + newString;
+	setTimeout(clearConfirmation, 1000);
     }
       
     function sendString(string_to_send) {
@@ -135,6 +136,10 @@
         $.post( requestURL, { params: newValue, access_token: accessToken });
 	document.getElementById("sent_confirmation").innerHTML = "Sent animation: " + newValue;
     }
+    
+    function clearConfirmation() {
+	    document.getElementById("sent_confirmation").innerHTML = "&nbsp;CLEAR";
+	}
     </script>
 
       <hr>
