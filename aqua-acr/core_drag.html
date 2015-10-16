@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  
+  
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    
+  
+  <style type='text/css'>
+    #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #selectable li { margin: 3px; padding: 1px; float: left; width: 20px; height: 20px; font-size: 2em; text-align: center; }
+
+  </style>
+  
+
+
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$(function() {
+    var _mousedown = false,
+        _last=null;
+        
+    $('#selectable li').mousedown(function(){
+        _mousedown = true;
+        //$('.ui-selected').removeClass('ui-selected');
+        $('#selectable li').attr('unselectable', 'on').css('user-select', 'none');
+        $(this).addClass('ui-selecting');
+    }).mouseup(function(){
+        _mousedown=false;  
+        $('.ui-selecting').addClass('ui-selected').removeClass('ui-selecting');
+        $('#selectable li').removeAttr('unselectable style');
+    }).mouseenter(function(){
+        if(_mousedown){
+            if($(this).hasClass('ui-selecting'))
+                $(_last).removeClass('ui-selecting');
+            
+            $(this).addClass('ui-selecting')
+        }
+    }).mouseleave(function(){
+        if(_mousedown){
+            _last =  $(this)[0];
+            $(this).addClass('ui-selecting');
+        }
+    });
+});  
+    
+    /*
+    $('#selectable').selectable({
+        start: function(event,ui){
+            _mousedown=true;
+        },
+        stop: function(event,ui){
+            _mousedown=false;
+            $('.ui-selected').removeClass('ui-selected');
+            $('.selecting').addClass('ui-selected');
+        },
+        selecting: function(event,ui){
+            console.log($(ui.selecting));
+            if($('.ui-selecting').length == 1)
+                $(ui.selecting).addClass('selecting');
+            
+            $('.ui-selecting').removeClass('ui-selecting');
+            $('.selecting').addClass('ui-selecting');
+        },
+        unselecting: function(event,ui){
+            if($(ui.unselecting).hasClass('selecting'))
+                $(ui.unselecting).removeClass('selecting');
+        }
+    });
+ 
+    $('#selectable').on('mouseenter', '.ui-selectee', function(){
+        if(_mousedown)
+            $(this).addClass('selecting');
+    });
+    */   
+
+});//]]> 
+
+</script>
+
+</head>
+<body>
+  <ol id="selectable">
+  <li class="ui-state-default">1</li>
+  <li class="ui-state-default">2</li>
+  <li class="ui-state-default">3</li>
+  <li class="ui-state-default">4</li>
+  <li class="ui-state-default">5</li>
+  <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+      <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+      <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+      <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+      <li class="ui-state-default">6</li>
+  <li class="ui-state-default">7</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+         <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+         <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+     <li class="ui-state-default">7</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+  <li class="ui-state-default">8</li>
+  <li class="ui-state-default">9</li>
+  <li class="ui-state-default">10</li>
+  <li class="ui-state-default">11</li>
+  <li class="ui-state-default">12</li>
+</ol>
+  
+</body>
+
+</html>
+
