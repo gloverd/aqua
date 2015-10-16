@@ -43,34 +43,6 @@
         $(function() {
           $( "#selectable" ).selectable();
         });
-        
-$(window).load(function(){
-$(function() {
-    var _mousedown = false,
-        _last=null;
-        
-    $('#selectable li').mousedown(function(){
-        _mousedown = true;
-        //$('.ui-selected').removeClass('ui-selected');
-        $('#selectable li').attr('unselectable', 'on').css('user-select', 'none');
-        $(this).addClass('ui-selecting');
-    }).mouseup(function(){
-        _mousedown=false;  
-        $('.ui-selecting').addClass('ui-selected').removeClass('ui-selecting');
-        $('#selectable li').removeAttr('unselectable style');
-    }).mouseenter(function(){
-        if(_mousedown){
-            if($(this).hasClass('ui-selecting'))
-                $(_last).removeClass('ui-selecting');
-            
-            $(this).addClass('ui-selecting')
-        }
-    }).mouseleave(function(){
-        if(_mousedown){
-            _last =  $(this)[0];
-            $(this).addClass('ui-selecting');
-        }
-    });
         </script>
 
 
