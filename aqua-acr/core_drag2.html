@@ -42,7 +42,13 @@
     <script>
         $( function(){
           $( document ).on( "vmouseover", "li", function(){
-            $( this ).addclass('ui-selecting');
+            $( this ).removeClass().addclass('ui-selecting');
+          });
+          $( document ).on( "vmouseover", "li", function(){
+            $( this ).html("HOVERED");
+          });
+                    $( document ).on( "vmouseover", "p", function(){
+            $( this ).html("HOVERED");
           });
         });
     </script>
