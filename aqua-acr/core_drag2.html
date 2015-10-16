@@ -38,11 +38,11 @@
 	<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <p>Touch here to see what happens.</p>
+    <p>4:19 Touch here to see what happens.</p>
     <script>
         $( function(){
           $( document ).on( "vmouseover", "li", function(){
-            $( this ).append( '<span style="color:#108040;"> vmouseover fired...</span>' );
+            $( this ).addclass('ui-selecting');
           });
         });
     </script>
