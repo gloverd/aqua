@@ -21,8 +21,11 @@
 
     <!-- javascript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+    -->
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     
   </head>
   <body>
@@ -42,9 +45,18 @@
         
         
         $(function() {
-          $( "#selectable" ).selectable({
-            event: "mouseover"
+        //$( "#selectable" ).selectable({
+        //    event: "mouseover"
+        //});
+        
+
+          $( document ).on( "vmouseover", "#selectable li", function(){
+            $('.ui-selected').removeClass('ui-selected');
+            $(this).addClass('ui-selecting');
+            
           });
+        });
+
         });
         
         
@@ -83,7 +95,7 @@
 
 
       <div class="demo-description">
-1522
+1610
 </div><!-- End demo-description -->
 
 
