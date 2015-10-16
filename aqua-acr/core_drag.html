@@ -13,7 +13,9 @@
   <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
-    
+    <!-- Include the jQuery Mobile library -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
   
   <style type='text/css'>
     #feedback { font-size: 1.4em; }
@@ -29,23 +31,23 @@ $(function() {
     var _mousedown = false,
         _last=null;
         
-    $('#selectable li').mousedown(function(){
+    $('#selectable li').vmousedown(function(){
         _mousedown = true;
         //$('.ui-selected').removeClass('ui-selected');
         $('#selectable li').attr('unselectable', 'on').css('user-select', 'none');
         $(this).addClass('ui-selecting');
-    }).mouseup(function(){
+    }).vmouseup(function(){
         _mousedown=false;  
         $('.ui-selecting').addClass('ui-selected').removeClass('ui-selecting');
         $('#selectable li').removeAttr('unselectable style');
-    }).mouseenter(function(){
+    }).vmouseenter(function(){
         if(_mousedown){
             if($(this).hasClass('ui-selecting'))
                 $(_last).removeClass('ui-selecting');
             
             $(this).addClass('ui-selecting')
         }
-    }).mouseleave(function(){
+    }).vmouseleave(function(){
         if(_mousedown){
             _last =  $(this)[0];
             $(this).addClass('ui-selecting');
