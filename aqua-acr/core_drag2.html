@@ -40,13 +40,29 @@
 	<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <p>5:31 Touch here to see what happens.</p>
+	<div id="index">
+	<p>5:40 Touch here to see what happens.</p>
+    	<span id="move-x"></span>
+	<span id="move-y"></span>
+	<span id="startend"></span>
     <script>
 $( function(){
 	//$( document ).on( "vmouseover", "li", function(){
 	//	$( this ).removeClass().addclass('ui-selecting');
 	//});
         
+        $('#index').on('touchstart vmousedown', function(){
+	    $('#startend').text('Touch start');
+	})
+	
+	$('#index').on('touchmove vmousemove', function(event){
+	    $('#move-x').text(event.pageX);
+	    $('#move-y').text(event.pageY);
+	})
+	
+	$('#index').on('touchend vmouseup', function(){
+	    $('#startend').text('Touch end');
+	});
         
         $( document ).on ( "vmousemove", "li", function(event) {
             $( this ).removeClass().addclass("ui-selecting");
@@ -75,6 +91,6 @@ $( function(){
         <li class="ui-state-default">15</li>
       </ol>
 
-
+</div>
     </body>
 </html>
