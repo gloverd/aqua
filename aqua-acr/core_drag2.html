@@ -38,19 +38,21 @@
 	<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-    <p>4:19 Touch here to see what happens.</p>
+    <p>5:28 Touch here to see what happens.</p>
     <script>
-        $( function(){
-          $( document ).on( "vmouseover", "li", function(){
-            $( this ).removeClass().addclass('ui-selecting');
-          });
-          $( document ).on( "vmouseover", "li", function(){
-            $( this ).html("HOVERED");
-          });
-                    $( document ).on( "vmouseover", "p", function(){
-            $( this ).html("HOVERED");
-          });
+$( function(){
+	//$( document ).on( "vmouseover", "li", function(){
+	//	$( this ).removeClass().addclass('ui-selecting');
+	//});
+        
+        
+        $( document ).on ( "vmousemove", "li", function(event) {
+            $( this ).removeClass().addclass("ui-selecting");
         });
+});
+    </script>
+
+        
     </script>
 
       <ol id="selectable">
