@@ -50,10 +50,8 @@
         //});
         
 
-          $( document ).on( "vmouseover", "#selectable li", function(){
-            $('.ui-selected').removeClass('ui-selected');
-            $(this).addClass('ui-selecting');
-            
+          $( document ).on( "vmouseover", "li", function(){
+            $(this).addClass('ui-selected');
           });
         });
 
@@ -95,7 +93,7 @@
 
 
       <div class="demo-description">
-1610
+1613
 </div><!-- End demo-description -->
 
 
