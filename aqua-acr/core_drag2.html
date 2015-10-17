@@ -41,7 +41,7 @@
 </head>
 <body>
 	<div id="index">
-	<p>3:25 Touch here to see what happens.</p>
+	<p>3:26 Touch here to see what happens.</p>
     	<span id="move-x"></span>
 	<span id="move-y"></span>
 	<span id="startend"></span>
@@ -70,8 +70,7 @@ $( function(){
 	});
         
         $( document ).on ( "vmousemove", "li", function(event) {
-        	$.vmouse.moveDistanceThreshold: 500;
-        	$.vmouse.clickDistanceThreshold: 500;
+       	$.vmouse.moveDistanceThreshold: 500;
             $( this ).removeClass().addclass("ui-selecting");
         });
         
