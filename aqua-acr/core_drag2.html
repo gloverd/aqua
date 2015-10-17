@@ -41,7 +41,7 @@
 </head>
 <body>
 	<div id="index">
-	<p>3:27 Touch here to see what happens.</p>
+	<p>3:30 Touch here to see what happens.</p>
     	<span id="move-x"></span>
 	<span id="move-y"></span>
 	<span id="startend"></span>
@@ -52,8 +52,8 @@ $( function(){
 	//});
 	
 	//stop scrolling
-	document.addEventListener('ontouchstart', function(e) {e.preventDefault()}, false);
-	document.addEventListener('ontouchmove', function(e) {e.preventDefault()}, false);
+	//document.addEventListener('ontouchstart', function(e) {e.preventDefault()}, false);
+	//document.addEventListener('ontouchmove', function(e) {e.preventDefault()}, false);
 
         
         $('#index').on('touchstart vmousedown', function(){
@@ -72,6 +72,12 @@ $( function(){
         $( document ).on ( "vmousemove", "li", function(event) {
             $( this ).removeClass().addclass("ui-selecting");
         });
+        
+        $.vmouse = {
+	moveDistanceThreshold: 10,
+	clickDistanceThreshold: 10,
+	resetTimerDuration: 1500
+	};
         
 });
     </script>
