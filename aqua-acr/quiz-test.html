@@ -7,12 +7,26 @@
   <meta name="googlebot" content="noindex, nofollow">
 
   
+  
+
+  
+  
+  
+
+  
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
 
   
 
+  
+
+  
+
+  
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+
   
 
   <style type="text/css">
@@ -30,15 +44,22 @@
     max-width: 360px;
 }
 
-#idNum0, #idNum10 {
-      background-color: red; 
-}
+[id^=idNum2] {
+  background-color: yellow; 
+  }
+  
+  [id$='5'] {
+  background-color: blue; 
+  }
+  
   </style>
 
   <title>Shuffle a set of HTML elements with jQuery</title>
 
   
     
+
+
 
 
 <script type='text/javascript'>//<![CDATA[
@@ -50,14 +71,15 @@ $(function () {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
  
-    var i = 0
-while (divs.length) {
-    divs[i].id = "idNum" + i;
-    i = i+1
-}
-
-
+ var idCount = 0;
+$('#shuffle div').each(function() {
+   $(this).attr('id', 'idNum' + idCount);
+   idCount++;
 });
+ 
+});
+
+
 //]]> 
 
 </script>
