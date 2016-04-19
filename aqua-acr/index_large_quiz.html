@@ -51,6 +51,22 @@
 
 	.tooltip i {color: lightblue; text-decoration: underline;}	
 	
+	    #shuffle > div.col-sm-12 {
+	    float: left;
+	    //background-color: steelblue;
+	    color: #fff;
+	    border-radius: 4px;
+	}
+	
+	[id^=idNum2] {
+	  background-color: red !important; 
+	  }
+	  
+	  [id$='5'] {
+	  background-color: blue !important; 
+	  }
+
+	
 	.col-sm-5 {
 	    background-color: lightgray;
 	    margin-top: 20px !important;
@@ -58,6 +74,7 @@
 	}
 	.col-sm-5:hover {
 	    background-color:lightblue;
+	    cursor:pointer;
 	}
 
 </style>	
@@ -280,24 +297,7 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 </script>	
 
-  <style type="text/css">
-    #shuffle > div.col-sm-12 {
-    float: left;
-    background-color: steelblue;
-    color: #fff;
-    border-radius: 4px;
-}
 
-[id^=idNum2] {
-  background-color: red !important; 
-  }
-  
-  [id$='5'] {
-  background-color: blue !important; 
-  }
-  
-  
-  </style>
 <script type='text/javascript'>//<![CDATA[
 
 $(function () {
