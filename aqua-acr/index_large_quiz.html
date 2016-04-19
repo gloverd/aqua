@@ -271,7 +271,7 @@ $(function () {
 	}
 	 
 	var idCount = 0;
-	$('#shuffle div.col-sm-12').each(function() {
+	$('#shuffle div.col-sm-5').each(function() {
 	   $(this).attr('id', 'idNum' + idCount);
 	   $(this).css("display","none");
 	   idCount++;
@@ -283,7 +283,7 @@ $(function () {
  $('[name=startButton]').click(function(){
     questionNum++;
     $('#shuffle #idNum'+questionNum).css("display","block");
-    //$('#shuffle #idNum'+questionNum+' .answer').css("display","none");
+    $('#shuffle #idNum'+questionNum+' .answer').css("display","none");
 });
 
 
@@ -296,7 +296,10 @@ $(function () {
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
 	$('#ans'+questionNum).css("display","block");
- 	$('#idNum'+questionNum+' div.answer').clone().appendTo( $( '#ans'+ questionNum ) );
+ 	$('#idNum'+questionNum+' div.answer').clone().prop("class", "answer").appendTo( $( '#ans'+ questionNum ) );
+ 	var parent = $('#ans'+questionNum);
+	var divs = parent.children();
+	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 });
 
   $('[name=copyAnswer]').click(function(){
