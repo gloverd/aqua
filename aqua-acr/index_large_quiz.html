@@ -178,7 +178,23 @@
 	<h2 id="sec0">ACR Fish Identification Quiz</h2>	
         <p>Select settings from the left then begin</p>	
 	<input type="button" value="Start" name="startButton" /> 
+	<input type="button" value="Clone" name="cloneButton" /> 
+
         <hr>	
+
+
+<div id="answerOptions" style="display:none;">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+</div>
         	
 
 <div class="row" id="shuffle"> 	
@@ -275,11 +291,27 @@ $(function () {
 	});
 });
 
- var hideCount = 0;
+//unhide the first button
+ var questionNum = -1;
  $('[name=startButton]').click(function(){
-    $('#shuffle #idNum'+hideCount).css("display","block");
-    hideCount++;
+    questionNum++;
+    $('#shuffle #idNum'+questionNum).css("display","block");
 });
+
+
+ //clone, shuffle, then only keep three
+  $('[name=cloneButton]').click(function(){
+ 	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .col-sm-5');
+	var parent = $('#ans'+questionNum);
+	var divs = parent.children();
+	while (divs.length) {
+		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+	}
+    $('#ans'+questionNum).css("display","block");
+    $('#ans'+questionNum+' div').slice(-divs.length+3).remove();
+    questionNum++;
+});
+
 
 //]]> 
 
