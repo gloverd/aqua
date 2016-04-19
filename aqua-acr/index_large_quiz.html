@@ -199,17 +199,17 @@
 	 	 <div class="col-sm-12 ">
 	 	<div class="col-sm-6" data-placement="bottom"><img src="images/Page-3-Image-6.jpg"></div>
 		<div class="col-sm-6"><h2>Blue Angelfish</h2><div class="row question-box">
-			<div class="col-sm-5 col-sm-offset-1">option0</div>
+			<div class="col-sm-5 col-sm-offset-1 answer">option0</div>
 		</div></div>
 	 </div>	 <div class="col-sm-12 ">
 	 	<div class="col-sm-6" data-placement="bottom"><img src="images/Page-3-Image-7.jpg"></div>
 		<div class="col-sm-6"><h2>Blue Angelfish</h2><div class="row question-box">
-			<div class="col-sm-5">option0</div>
+			<div class="col-sm-5 col-sm-offset-1 answer">option0</div>
 		</div></div>
 	 </div>	 <div class="col-sm-12 ">
 	 	<div class="col-sm-6" data-placement="bottom"><img src="images/Page-3-Image-8.jpg"></div>
 		<div class="col-sm-6"><h2>Blue Angelfish</h2><div class="row question-box">
-			<div class="col-sm-5">option0</div>
+			<div class="col-sm-5 col-sm-offset-1 answer">option0</div>
 		</div></div>
 	 </div>
 	</div>	
@@ -285,24 +285,10 @@ $(function () {
  $('[name=startButton]').click(function(){
     questionNum++;
     $('#shuffle #idNum'+questionNum).css("display","block");
-    $('#shuffle #idNum'+questionNum+' > .question-box .col-sm-5').css("display","none");
+    $('#shuffle #idNum'+questionNum+' .answer').css("display","none");
 });
 
 
- //clone, shuffle, then only keep three
-  $('[name=cloneButton]').click(function(){
- 	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .col-sm-5');
-	var parent = $('#ans'+questionNum);
-	var divs = parent.children();
-	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
-    $('#ans'+questionNum+' div').slice(-divs.length+3).remove();
-    $('#shuffle #idNum'+questionNum+' .question-box .col-sm-5').clone().appendTo(#ans'+questionNum);
-    var parent = $('#ans'+questionNum);
-	var divs = parent.children();
-	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
-	    $('#ans'+questionNum).css("display","block");
-    questionNum++;
-});
 
 
 //]]> 
