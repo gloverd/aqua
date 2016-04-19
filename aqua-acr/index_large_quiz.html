@@ -296,7 +296,10 @@ $(function () {
 	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
+	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
 	$('#ans'+questionNum).css("display","block");
+ 	$('#ans'+questionNum+' .answer').clone().appendTo('#ans'+ questionNum);
+	$('#ans'+questionNum+' div').css("display","block");
 });
 
 
