@@ -177,7 +177,8 @@
 
 	<h2 id="sec0">ACR Fish Identification Quiz</h2>	
         <p>Select settings from the left then begin</p>	
-
+	<input type="button" value="Start" name="startButton" /> 
+	<input type="button" value="Copy" name="cloneButton" /> 
         <hr>	
         	
 
@@ -209,12 +210,7 @@
 	 </div>
 	</div>	
 	
-	
-	
-	
-        <hr>	
-        <!--<h4><a href="http://aqua.org">Aqua.org</a></h4>-->	
-        <hr>	
+
 	
         </div><!--/right-->	
 </div><!--/row-->	
@@ -280,6 +276,11 @@ $(function () {
 	});
 });
 
+ var hideCount = 0;
+ $('[name=startButton]').click(function(){
+    $('#shuffle #idNum'+hideCount).css("display","block");
+    hideCount++;
+});
 
 //]]> 
 
