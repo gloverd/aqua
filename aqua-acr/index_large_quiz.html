@@ -303,8 +303,8 @@ $(function () {
 });
 
   $('[name=copyAnswer]').click(function(){
- 	$('#ans'+questionNum+' div.answer').clone().appendTo( $( '#ans'+ questionNum ) );
- 		var parent = $('#ans'+questionNum);
+ 	$('#ans'+questionNum+' div.answer').clone().appendTo( $( '#shuffle #idNum'+questionNum+ '#ans'+ questionNum + '.answer') );
+ 	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 
