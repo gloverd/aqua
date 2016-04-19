@@ -179,6 +179,7 @@
         <p>Select settings from the left then begin</p>	
 	<input type="button" value="Start" name="startButton" /> 
 	<input type="button" value="Clone" name="cloneButton" /> 
+	<input type="button" value="copyAnswer" name="copyAnswer" /> 
 
         <hr>	
 
@@ -298,10 +299,12 @@ $(function () {
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
 	$('#ans'+questionNum).css("display","block");
- 	$('#ans'+questionNum+' .answer').clone().appendTo('#ans'+ questionNum);
-	$('#ans'+questionNum+' div').css("display","block");
+ 	$('#ans'+questionNum+' div.answer').clone().appendTo('#ans'+ questionNum);
 });
 
+  $('[name=copyAnswer]').click(function(){
+ 	$('#ans'+questionNum+' div.answer').clone().appendTo('#ans'+ questionNum);
+});
 
 //]]> 
 
