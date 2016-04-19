@@ -285,6 +285,7 @@ $(function () {
  $('[name=startButton]').click(function(){
     questionNum++;
     $('#shuffle #idNum'+questionNum).css("display","block");
+    $('#shuffle #idNum'+questionNum+' .question-box .col-sm-5').css("display","none");
 });
 
 
@@ -293,11 +294,13 @@ $(function () {
  	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .col-sm-5');
 	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
-	while (divs.length) {
-		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-	}
-    $('#ans'+questionNum).css("display","block");
+	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
     $('#ans'+questionNum+' div').slice(-divs.length+3).remove();
+    $('#shuffle #idNum'+questionNum+' .question-box .col-sm-5').clone().appendTo(#ans'+questionNum);
+    var parent = $('#ans'+questionNum);
+	var divs = parent.children();
+	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
+	    $('#ans'+questionNum).css("display","block");
     questionNum++;
 });
 
