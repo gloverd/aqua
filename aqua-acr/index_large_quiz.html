@@ -266,18 +266,18 @@ $('a[href*=#]:not([href=#])').click(function() {
 <script type='text/javascript'>//<![CDATA[
 
 $(function () {
-    var parent = $("#shuffle");
-    var divs = parent.children();
-    while (divs.length) {
-        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-    }
- 
- var idCount = 0;
-$('#shuffle div.col-sm-12').each(function() {
-   $(this).attr('id', 'idNum' + idCount);
-   idCount++;
-});
- 
+	var parent = $("#shuffle");
+	var divs = parent.children();
+	while (divs.length) {
+		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+	}
+	 
+	var idCount = 0;
+	$('#shuffle div.col-sm-12').each(function() {
+	   $(this).attr('id', 'idNum' + idCount);
+	   $(this).css("display","none");
+	   idCount++;
+	});
 });
 
 
