@@ -323,16 +323,8 @@ $('a[href*=#]:not([href=#])').click(function() {
   <style type="text/css">
     #shuffle > div.col-sm-12 {
     float: left;
-    line-height: 30px;
-    width: 30px;
-    text-align: center;
     background-color: steelblue;
     color: #fff;
-    border-radius: 4px;
-    margin: 3px;
-}
-#shuffle {
-    max-width: 360px;
 }
 
 [id^=idNum2] {
@@ -355,7 +347,7 @@ $(function () {
     }
  
  var idCount = 0;
-$('#shuffle div').each(function() {
+$('#shuffle div.col-sm-12').each(function() {
    $(this).attr('id', 'idNum' + idCount);
    idCount++;
 });
