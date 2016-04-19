@@ -300,7 +300,7 @@ $(function () {
 });
 
   $('[name=copyAnswer]').click(function(){
- 	$(#idNum'+questionNum+' div.answer').clone().appendTo('#ans'+ questionNum);
+ 	$('#idNum'+questionNum+' div.answer').clone().appendTo('#ans'+ questionNum);
  	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
