@@ -183,7 +183,7 @@
         <hr>	
 
 
-<div id="answerOptions">
+<div id="answerOptions" style="display:none;">
 <div class="col-sm-5 col-sm-offset-1">option1</div>
 <div class="col-sm-5 col-sm-offset-1">option2</div>
 <div class="col-sm-5 col-sm-offset-1">option3</div>
@@ -191,6 +191,7 @@
 <div class="col-sm-5 col-sm-offset-1">option5</div>
 <div class="col-sm-5 col-sm-offset-1">option6</div>
 <div class="col-sm-5 col-sm-offset-1">option7</div>
+
 </div>
         	
 
@@ -203,12 +204,12 @@
 	 </div>	 <div class="col-sm-12 ">
 	 	<div class="col-sm-6" data-placement="bottom"><img src="images/Page-3-Image-7.jpg"></div>
 		<div class="col-sm-6"><h2>Blue Angelfish</h2><div class="row question-box">
-			<div class="col-sm-5 col-sm-offset-1">option0</div>
+			<div class="col-sm-5">option0</div>
 		</div></div>
 	 </div>	 <div class="col-sm-12 ">
 	 	<div class="col-sm-6" data-placement="bottom"><img src="images/Page-3-Image-8.jpg"></div>
 		<div class="col-sm-6"><h2>Blue Angelfish</h2><div class="row question-box">
-			<div class="col-sm-5 col-sm-offset-1">option0</div>
+			<div class="col-sm-5">option0</div>
 		</div></div>
 	 </div>
 	</div>	
@@ -264,12 +265,13 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 <script type='text/javascript'>//<![CDATA[
 
-
-//shuffle fish
 $(function () {
 	var parent = $("#shuffle");
 	var divs = parent.children();
-	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);}
+	while (divs.length) {
+		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+	}
+	 
 	var idCount = 0;
 	$('#shuffle div.col-sm-12').each(function() {
 	   $(this).attr('id', 'idNum' + idCount);
@@ -278,34 +280,25 @@ $(function () {
 	});
 });
 
-//Start button (unhide first question)
+//unhide the first button
  var questionNum = -1;
  $('[name=startButton]').click(function(){
     questionNum++;
     $('#shuffle #idNum'+questionNum).css("display","block");
-    $('#shuffle #idNum'+questionNum+' col-sm-5').css("display","none");
 });
-
 
 
  //clone, shuffle, then only keep three
   $('[name=cloneButton]').click(function(){
- 	
- 	//shuffle list of options
-	var parent = $("#answerOptions");
-	var divs = parent.children();
-	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]); }
-	$('#answerOptions div').each(function() {
-	    	$(this).css("display","none");
-	});
-
  	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .col-sm-5');
-	var parent = $('#ans'+questionNum question-box);
+	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
-	while (divs.length) {	parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);}
-    	$('#ans'+questionNum).css("display","block");
-    	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
-    	questionNum++;
+	while (divs.length) {
+		parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+	}
+    $('#ans'+questionNum).css("display","block");
+    $('#ans'+questionNum+' div').slice(-divs.length+3).remove();
+    questionNum++;
 });
 
 
