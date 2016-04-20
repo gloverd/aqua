@@ -301,15 +301,14 @@ $(function () {
 
 
 //if click is correct
-$('#ans'+questionNum+' div').on("click", function() {
-	if ($(this).hasClass("ans")) {
-		$('#ans'+questionNum+' .col-sm-5').css("background-color","white");
-		$(this).css("background-color","green");
-	}
-	else {
-		$(this).css("background","red");
-	}
-	
+$(".col-sm-5").on("click", function() {
+    if ($(this).hasClass('ans')) { 
+    $(".col-sm-5").css("background-color","white");
+    $(this).css("background-color", "green");
+    }
+    else{
+    $(this).css("background-color", "red");
+    }
 	
 });
 
