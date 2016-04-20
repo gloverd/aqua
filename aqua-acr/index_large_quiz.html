@@ -490,18 +490,11 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 	 	loadQuestion();
 	 	
 	 	//bad practice 
-	 	var start = new Date().getTime();
-		for (var i = 0; i < 1e7; i++) { if ((new Date().getTime() - start) > 1500){ break; } }
 	 	$('#idNum'+questionNum).delay(2000).scrollintoview();
 
 		// write function to update numbers on the left side for how many you got write.
 		
 		// update into only by groups
-			 	
-	 	//$('body').delay( 2000 ).scrollTo('#idNum'+questionNum);
-	 	//$('html, body').delay( 2000 ).animate({
-        	//	scrollTop: $('#idNum'+questionNum).offset().top
-    		//}, 2000);
 
 	 }
 	 else {
