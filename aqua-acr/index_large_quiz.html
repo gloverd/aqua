@@ -281,16 +281,11 @@ $(function () {
 //unhide the first button
  var questionNum = -1;
  $('[name=startButton]').click(function(){
-    questionNum++;
-    $('#shuffle #idNum'+questionNum).css("display","block");
-    $('#shuffle #idNum'+questionNum+' .answer').css("display","none");
-});
-
-
-
- //clone, shuffle, then only keep three
-  $('[name=cloneButton]').click(function(){
- 	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .answer');
+	questionNum++;
+	$('#shuffle #idNum'+questionNum).css("display","block");
+	$('#shuffle #idNum'+questionNum+' .answer').css("display","none");
+    
+	$('#answerOptions').clone().prop({ id: "ans" + questionNum}).insertAfter('#shuffle #idNum'+questionNum+' .answer');
 	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
@@ -301,16 +296,21 @@ $(function () {
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum).css("display","block");
 	$('.ans').css("display","block");
- 	
 });
 
-  $('[name=copyAnswer]').click(function(){
- 	$('#idNum'+questionNum+' div.answer').clone().appendTo('#ans'+ questionNum);
- 	var parent = $('#ans'+questionNum);
-	var divs = parent.children();
-	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 
+
+//if click is correct
+$('#ans'+questionNum+' .col-sm-5').click(function(){
+	if ($(this).hasClass("ans")) {
+		$('#ans'+questionNum+' .col-sm-5').css("background-color","white");
+		$(this).css("background-color","green");
+	}
+	else {
+		$(this).css("background-color","red");
+	}
 });
+
 
 //]]> 
 
