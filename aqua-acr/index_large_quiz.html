@@ -303,11 +303,10 @@ $(function () {
 //if click is correct
 $(".col-sm-5").on("click", function() {
     if ($(this).hasClass('ans')) { 
-    $(".col-sm-5").css("background-color","white");
-    $(this).css("background-color", "green");
+	$('.ans').css("display","none");
     }
     else{
-    $(this).css("background-color", "red");
+	$('.ans').css("display","none");
     }
 	
 });
