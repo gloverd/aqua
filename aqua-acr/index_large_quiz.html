@@ -488,10 +488,11 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 		$('.wrong').css("background-color","lightcoral");
 		$(this).css("background-color","lightgreen");
 		$('#idNum'+questionNum+ ' h2').css("color","black");
-	 	loadQuestion().delay(2000);
+	 	loadQuestion();
 	 	
 	 	//bad practice 
-	 	setTimeout("$('#idNum'+questionNum).delay(2000).scrollintoview();",2000);
+	 	sleep(1500);
+	 	$('#idNum'+questionNum).delay(2000).scrollintoview();
 
 		// write function to update numbers on the left side for how many you got write.
 		
