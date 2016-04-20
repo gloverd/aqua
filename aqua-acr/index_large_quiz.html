@@ -178,7 +178,6 @@
 	<h2 id="sec0">ACR Fish Identification Quiz</h2>	
         <p>Select settings from the left then begin</p>	
 	<input type="button" value="Start" name="startButton" />  
-	<p>updated for child h2</p>
         <hr>	
 
 
@@ -447,6 +446,7 @@ $(function () {
 	$('#shuffle div.col-sm-12').each(function() {
 	   $(this).attr('id', 'idNum' + idCount);
 	   $(this).css("display","none");
+	   $('h2').css("color","black");
 	   idCount++;
 	});
 });
@@ -487,11 +487,10 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 		$(this).closest('#ans'+questionNum).children().css("background-color","white");
 		$('.wrong').css("background-color","lightcoral");
 		$(this).css("background-color","lightgreen");
-		$('#idNum'+questionNum+ ' h2').css("background-color","blue");
+		$('#idNum'+questionNum+ ' h2').css("color","black");
 	 	loadQuestion();
 	 	
-	 	//$('#idNum'+questionNum).delay(2000).get(0).scrollIntoView();
-	 	$('#idNum'+questionNum).delay(1000	).scrollintoview();
+	 	$('#idNum'+questionNum).delay(2000).scrollintoview();
 
 		// write function to update numbers on the left side for how many you got write.
 		
