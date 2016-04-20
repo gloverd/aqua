@@ -457,6 +457,8 @@ $(function () {
  $('[name=startButton]').click(function(){
  	//load first set then hide
  	loadQuestion()
+        $('#idNum'+questionNum).scrollintoview({ duration: "slow"});
+
 	$(this).css("display","none");
  });
  	
