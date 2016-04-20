@@ -280,7 +280,10 @@ $(function () {
 
 //unhide the first button
  var questionNum = -1;
- $('[name=startButton]').click(function(){
+
+ $('[name=startButton]').click(loadQuestion);
+ 	
+ 	function loadQuestion(){
 	questionNum++;
 	$('#shuffle #idNum'+questionNum).css("display","block");
 	$('#shuffle #idNum'+questionNum+' .answer').css("display","none");
@@ -296,15 +299,15 @@ $(function () {
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum).css("display","block");
 	$('.ans').css("display","block");
-});
+}
 
 
 
 //if click is correct
 $('#shuffle').on('click', '.ans', function() {
-	$('.ans').css("background-color","lightgreen");
 	$(this).closest('#ans'+questionNum).children().css("background-color","red");
-
+	$('.ans').css("background-color","lightgreen");
+	loadQuestion();
 });
 
 //]]> 
