@@ -295,12 +295,12 @@ $(function () {
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
-	$('#idNum'+questionNum+' div.answer').clone().prop({ class: "ans"}).appendTo( $( '#ans'+ questionNum ) );
+	$('#idNum'+questionNum+' div.answer').clone().prop({ class: "ans col-sm-5 col-sm-offset-1"}).appendTo( $( '#ans'+ questionNum ) );
 	var parent = $('#ans'+questionNum);
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
-	
-	$('#ans'+questionNum+' div').css("display","block");
+	$('#ans'+questionNum).css("display","block");
+	$('.ans').css("display","block");
  	
 });
 
