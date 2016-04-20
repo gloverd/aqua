@@ -301,14 +301,8 @@ $(function () {
 
 
 //if click is correct
-$(".col-sm-5").on("click", function() {
-    if ($(this).hasClass('ans')) { 
-	$('.ans').css("display","none");
-    }
-    else{
-	$('.ans').css("display","none");
-    }
-	
+$('#ans'+questionNum+" .ans").click(function() {
+  $(this).slideUp();
 });
 
 //]]> 
