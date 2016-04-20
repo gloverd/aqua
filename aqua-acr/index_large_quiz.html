@@ -303,7 +303,8 @@ $(function () {
 //if click is correct
 $('#shuffle').on('click', '.ans', function() {
 	$('.ans').css("background-color","lightgreen");
-	$(this).css("background-color","lightblue");
+	$(this).closest('#ans'+questionNum).children().css("background-color","red");
+
 });
 
 //]]> 
