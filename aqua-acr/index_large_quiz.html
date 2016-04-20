@@ -446,7 +446,7 @@ $(function () {
 	$('#shuffle div.col-sm-12').each(function() {
 	   $(this).attr('id', 'idNum' + idCount);
 	   $(this).css("display","none");
-	   $('h2').css("color","white");
+	   $('.col-sm-6 h2').css("color","white");
 	   idCount++;
 	});
 });
@@ -490,7 +490,7 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 	 	loadQuestion();
 	 	
 	 	//bad practice 
-	 	$('#idNum'+questionNum).delay(2000).scrollintoview();
+	 	$('#idNum'+questionNum)).scrollintoview({ duration: "slow"});
 
 		// write function to update numbers on the left side for how many you got write.
 		
