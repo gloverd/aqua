@@ -478,6 +478,7 @@ $(function () {
 	$('.ans').css("display","block");
 }
 
+    
 
 
 //if click is wrong
@@ -488,7 +489,11 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 		$(this).css("background-color","lightgreen");
 	 	$(this).closest('h2').css("background-color","blue");
 	 	loadQuestion();
-	 	$('body').scrollTo('#idNum'+questionNum);
+	 	
+	 	$('body').delay( 2000 ).scrollTo('#idNum'+questionNum);
+	 	$('html, body').delay( 2000 ).animate({
+        		scrollTop: $('#idNum'+questionNum).offset().top
+    		}, 2000);
 
 	 }
 	 else {
