@@ -295,8 +295,13 @@ $(function () {
 	var divs = parent.children();
 	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
 	$('#ans'+questionNum+' div').slice(-divs.length+3).remove();
-	$('#ans'+questionNum).css("display","block");
- 	$('#idNum'+questionNum+' div.answer').clone().prop({ class: "ans"}).appendTo( $( '#ans'+ questionNum ) );
+	$('#idNum'+questionNum+' div.answer').clone().prop({ class: "ans"}).appendTo( $( '#ans'+ questionNum ) );
+	var parent = $('#ans'+questionNum);
+	var divs = parent.children();
+	while (divs.length) {parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);	}
+	
+	$('#ans'+questionNum+' div').css("display","block");
+ 	
 });
 
   $('[name=copyAnswer]').click(function(){
