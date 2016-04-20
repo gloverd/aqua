@@ -301,8 +301,9 @@ $(function () {
 
 
 //if click is correct
-$('#ans'+questionNum).on('click', '.ans', function() {
+$('#shuffle').on('click', '.ans', function() {
 	$('.ans').css("background-color","green");
+	$(this).parent().css("background-color","yellow");
 });
 
 //]]> 
