@@ -310,18 +310,17 @@ $(function () {
 
 //if click is wrong
 $('#shuffle').on('click', '.col-sm-5', function() {
-	 if ( $( this ).hasClass( "ans" ) ) {  $(this).css("background-color","lightgreen");}
-	 else { $(this).css("background-color","lightcoral");	 }
+	 if ( $( this ).hasClass( "ans" ) ) {
+		$(this).closest('#ans'+questionNum).children().css("background-color","white");
+		$(this).closest('h2').css("background-color","blue");
+	 	$(this).css("background-color","lightgreen");
+	 	loadQuestion();
+	 }
+	 else {
+	 	$(this).css("background-color","lightcoral");
+	 }
 });
 
-
-//add logic to see if wrong, set to lightcoral
-//$('#shuffle').on('click', '.ans', function() {
-//	$(this).closest('#ans'+questionNum).children().css("background-color","white");
-//	$(this).closest('h2').css("background-color","blue");
-//	$('.ans').css("background-color","lightgreen");
-//	loadQuestion();
-//});
 
 //]]> 
 
