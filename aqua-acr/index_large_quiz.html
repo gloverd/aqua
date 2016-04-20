@@ -177,9 +177,7 @@
 
 	<h2 id="sec0">ACR Fish Identification Quiz</h2>	
         <p>Select settings from the left then begin</p>	
-	<input type="button" value="Start" name="startButton" /> 
-	<input type="button" value="Clone" name="cloneButton" /> 
-	<input type="button" value="copyAnswer" name="copyAnswer" /> 
+	<input type="button" value="Start" name="startButton" />  
 
         <hr>	
 
@@ -280,10 +278,14 @@ $(function () {
 
 //unhide the first button
  var questionNum = -1;
-
- $('[name=startButton]').click(loadQuestion);
+ 
+ $('[name=startButton]').click(function(){
+ 	//load first set then hide
+ 	loadQuestion()
+	$(this).css("display","none");
+ });
  	
- 	function loadQuestion(){
+ function loadQuestion(){
 	questionNum++;
 	$('#shuffle #idNum'+questionNum).css("display","block");
 	$('#shuffle #idNum'+questionNum+' .answer').css("display","none");
@@ -304,8 +306,10 @@ $(function () {
 
 
 //if click is correct
+
+//add logic to see if wrong, set to lightcoral
 $('#shuffle').on('click', '.ans', function() {
-	$(this).closest('#ans'+questionNum).children().css("background-color","red");
+	$(this).closest('#ans'+questionNum).children().css("background-color","white");
 	$('.ans').css("background-color","lightgreen");
 	loadQuestion();
 });
