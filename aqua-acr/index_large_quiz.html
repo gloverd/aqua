@@ -488,7 +488,7 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 		$('.wrong').css("background-color","lightcoral");
 		$(this).css("background-color","lightgreen");
 		$('#idNum'+questionNum+ ' h2').css("color","black");
-	 	loadQuestion();
+	 	loadQuestion().delay(2000);
 	 	
 	 	$('#idNum'+questionNum).delay(2000).scrollintoview();
 
