@@ -488,6 +488,8 @@ $('#shuffle').on('click', '.col-sm-5', function() {
 		$(this).css("background-color","lightgreen");
 	 	$(this).closest('h2').css("background-color","blue");
 	 	loadQuestion();
+	 	$('body').scrollTo('#idNum'+questionNum);
+
 	 }
 	 else {
 	 	$(this).css("background-color","lightcoral");
