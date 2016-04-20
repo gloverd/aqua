@@ -310,6 +310,7 @@ $(function () {
 //add logic to see if wrong, set to lightcoral
 $('#shuffle').on('click', '.ans', function() {
 	$(this).closest('#ans'+questionNum).children().css("background-color","white");
+	$(this).closest('h2').css("background-color","blue");
 	$('.ans').css("background-color","lightgreen");
 	loadQuestion();
 });
