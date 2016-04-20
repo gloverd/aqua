@@ -301,8 +301,8 @@ $(function () {
 
 
 //if click is correct
- $('.ans').click(function(){
-  $(this).slideUp();
+$('#ans'+questionNum).on('click', '.ans', function() {
+	$('.ans').css("background-color","green");
 });
 
 //]]> 
