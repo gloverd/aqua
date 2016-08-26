@@ -100,7 +100,7 @@
             <a href="#" id="download-button" class="btn-large waves-effect waves-light">Get Started</a>
           </div>
           -->
-          <div class="row center"><a class="blue-text text-lighten-4" href="#">beta release v2.0.1.2</a></div>
+          <div class="row center"><a class="blue-text text-lighten-4" href="#">beta release v2.0.1.3</a></div>
           
           <br>
 
@@ -116,7 +116,7 @@
       </div>
 
       <div class="container">
-        <div class="section">
+        <div class="section" id="shuffle">
           
 <div class="col s12 m12">
     <h2 class="header">Horizontal Card</h2>
@@ -256,6 +256,20 @@
     </footer>    
     
     
+    <script type='text/javascript'>//<![CDATA[
+
+    //if click is wrong
+$('#shuffle').on('click', '.waves-effect', function() {
+	 if ( $( this ).hasClass( "waves-green" ) ) {
+		setTimeout($(this).addClass("green"),2000);
+
+	 }
+	 else {
+	 	$(this).addClass("red");
+	 }
+});
+//]]> 
+</script>
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
