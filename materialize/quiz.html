@@ -230,7 +230,10 @@ $('a.waves-effect').click(function() {
   tempButton = $(this);
 
   if (tempButton.hasClass("waves-red")) {
+        alert("add Red0");
     setTimeout(addRed, 800);
+        alert("add Red2");
+
   }
   if (tempButton.hasClass("waves-green")) {
     setTimeout(addGreen, 800);
@@ -238,6 +241,8 @@ $('a.waves-effect').click(function() {
 });
 
 function addRed() {
+      alert("add Red1");
+
   tempButton.addClass("red");
 }
 function addGreen() {
