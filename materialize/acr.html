@@ -120,7 +120,7 @@
           </div>
 
           <!--   Promo Section   -->
-      <div class="row">
+      <div class="row" id="main_cont">
 <h2 class="header">Horizontal Card</h2>
 
 
@@ -279,7 +279,22 @@
     <script src="js/prism.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
-    
+    <script src="leveller.min.js"></script>
+<script>
+$(window).load(function(){
+
+  var $tiles = $('#main_cont .s12');
+
+  $tiles.leveller({
+    cssSelector: '.card-title'
+  });
+
+  $(window).resize(function(){
+    $tiles.leveller();
+  });
+
+});
+</script>
 
   </body>
 </html>
