@@ -11,17 +11,17 @@
 }
 
 .mdl-layout__title {
-  font-size: 14px;
+  font-size: 28px;
   text-align: center;
   font-weight: 300;
 }
 
 .is-compact .mdl-layout__title span {
-  display: none;
+  /*display: none;*/
 }
 
 .portfolio-logo-row {
-  min-height: 200px;
+  min-height: 64px;
 }
 
 .is-compact .portfolio-logo-row {
@@ -157,8 +157,9 @@ footer {
 }
 
 
-@media (min-width: 1100px)
+@media (min-width: 1100px) {
 .mdl-cell {
     margin: 8px;
     width: calc(20% - 16px);
+}
 }
