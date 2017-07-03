@@ -1,0 +1,273 @@
+%% Homework Assignment 05
+%  Clear variables, command window, and close all figures, load fresh data.
+%  Perform calculations (PCA and Spike Clustering).
+clear, clc, close all
+
+load('M05_Assignment.mat')
+%  Rename and combine Spike Waveforms
+source1 = electrode18_Source1_waveforms;
+source2 = electrode18_Source2_waveforms;
+source0 = [source1; source2];
+
+%  Perform PCA onver combined waveform. COEFF - Coefficient Matrix. SCORE -
+%  fit of PCA. LATENT (or \lambda) - the latent roots, also the variance^2.
+[COEFF,SCORE,LATENT] = pca(source0);
+
+%  Perform Spike Clustering over first three PC's
+X = SCORE(:,1:3);                   % Create new variable for simplicity
+[idx, C] = kmeans(X,3);             
+%  Note! Occationally the kmeans division splits 'wrong' cluster, this
+%  cluster is notable being mapped in PC1<0. If this cluster was split
+%  then there would be two centeroids PC1<0, if that is the case, split
+%  again, until only one centeroid is PC1<0, and two are PC1>0. Also check
+%  to check the order of clusters
+while length(find(C(:,1)>0)) == 1 | find(C(:,1)<0) == 1 | find(C(:,1)<0) == 3
+    if find(C(:,1)<0) ~= 2 
+        disp('Spike Cluster out of order. Trying again...');
+    else 
+        disp('kmeans didn''t split correctly. Trying again...')
+    end
+    [idx, C] = kmeans(X,3);
+end
+
+%% Figure 1 -  Raw data to scatterplot of PCA
+figure
+subplot(2,2,1)
+    %  Raw data for analysis (every 50th for clarity in plot)
+    hold on
+    for i=1:50:length(source0)
+        plot(1:32,source0(i,:),'b-');
+    end
+    hold off
+    %  Plot formatting
+    title('(a) Raw Data used in Analysis');
+    xlabel('Time (ms)');
+    ylabel('Amplitude (microVolts)'); 
+    set(gca,'XTick',[0:8:32]);set(gca,'XTickLabel',[0:0.2:0.8]);xlim([0 32]);
+
+
+subplot(2,2,2)
+    %  First Three principal components
+    %  Stored in the COEFF matrix as columns.Plot along with labels to identify
+    %  Plot PCs and add labels
+    hold on
+    plot(1:32,COEFF(:,1),'r-' , 'lineWidth',2);text(19,COEFF(19,1)+0.05,'PC1');
+    plot(1:32,COEFF(:,2),'b--', 'lineWidth',2);text(17,COEFF(17,2)+0.05,'PC2');
+    plot(1:32,COEFF(:,3),'k: ', 'lineWidth',2);text(28,COEFF(28,3)-0.05,'PC3');
+    hold off
+    %  Plot formatting
+    title('(b) The First Three Principal Components');
+    xlabel('Time (ms)');
+    ylabel('Magnitude'); 
+    set(gca,'XTick',[0:8:32]);set(gca,'XTickLabel',[0:0.2:0.8]);xlim([0 32]);
+    %legend('1st PC', '2nd PC', '3rd PC')
+s
+subplot (2,2,3)
+    %  Standard deviation of the scores in the direction of each CP
+    %  The latent roots (LATENT) are the variance, so sqrt(LATENT) = stdev
+    %  This can also be done by doing std(SCORE)
+	hold on
+    plot(1:32,sqrt(LATENT(:)),'bo'); % plot(1:32,std(SCORE(:,:)),'bo');
+    ylabel('sqrt(\lambda) (microVolts)');
+    %  Plot Right axis
+    yyaxis right
+    for i=1:32
+        plot(i,(sum(LATENT(1:i))*100)/sum(LATENT(:)),'ro');
+    end
+    ylabel('data variation (cumulative \lambda)');
+    %  Plot formatting
+    title('(c) Deviation of scores of each PC');
+    xlabel('component number');
+    
+
+
+subplot(2,2,4)
+    %  Scatterplot of scores from the first two PCs
+    %  Define data sets
+    x = SCORE(1:end,1);               
+    y = SCORE(1:end,2);
+    plot(x,y,'b.');
+    %  Plot formatting
+    title('(d) Scatterplot of first two PCs');
+    xlabel('1st component score');
+    ylabel('2nd component score');
+
+    
+
+%% Figure 2 - Spike Clustering into 3 groups based off of kmeans function.
+%  Spike clustering is done above, using kmeans into 3 groups, with
+%  validation to ensure that the clustering occurs where we want.
+figure
+subplot(2,3,1)
+    %  Scatterplot of scores from the score of the first two PCs
+    plot(X(:,1),X(:,2),'b.');
+    %  Plot formatting
+    title('(a) Raw scatterplot of first two PCs');
+    xlabel('1st component score');
+    ylabel('2nd component score');
+    
+subplot(2,3,4)
+    %  Clustered Scatterplot of first two PCs
+    hold on;
+    % Plot graphs -- can be replaced with : gscatter(X(:,1), X(:,2), idx)
+    plot(X(idx==2,1),X(idx==2,2),'b.','MarkerSize',3)
+    plot(X(idx==1,1),X(idx==1,2),'r.','MarkerSize',3)
+    plot(X(idx==3,1),X(idx==3,2),'g.','MarkerSize',3)
+    plot3(C(:,1),C(:,2),C(:,3),'kx', 'MarkerSize',15,'LineWidth',3)
+    %  Plot Formatting
+    title('(b) Clustered scatterplot');
+    xlabel('1st Principal Component');
+    ylabel('2nd Principal Component');
+    hold off
+    
+subplot(2,3,[2 3 5 6])
+    %  Clustered Scatterplot of first three PCs
+    hold on; grid on; view([-25 56]);
+    plot3(X(idx==2,1),X(idx==2,2),X(idx==2,3),'b.','MarkerSize',3)
+    plot3(X(idx==1,1),X(idx==1,2),X(idx==1,3),'r.','MarkerSize',3)
+    plot3(X(idx==3,1),X(idx==3,2),X(idx==3,3),'g.','MarkerSize',3)
+    plot3(C(:,1),C(:,2),C(:,3),'kx', 'MarkerSize',15,'LineWidth',3)
+    %  Plot Formatting
+    title('(c) Clustered scatterplot of first 3 PCs');
+    xlabel('1st Principal Component','rotation', 12, 'Position', [17 -255 -225]);
+    ylabel('2nd Principal Component','Rotation',-55, 'Position', [-490 -18 -225]);
+    zlabel('3rd Principal componenet');
+    %  Because of the scale of data the legend needs to be enlarged.
+    %  Extract icons from legend and set Markersize to be larger.
+    [~,icons] = legend('Cluster 1','Cluster 2','Cluster 3', 'Centeroid','Location','NE');
+    objhl = findobj(icons, 'type', 'line'); set(objhl, 'Markersize', 20);
+    hold off
+
+
+%% Figure 3 - Clustering of 
+figure
+subplot(2,2,1)
+    hold on
+    %  Obtain statistics (std, median, min, and max)
+    Mu1 = mean( source1(:,:) ); Mu2 = mean( source2(:,:) ); % Mean
+    Min1 = min( source1(:,:) ); Min2 = min( source2(:,:) ); % Min
+    Max1 = max( source1(:,:) ); Max2 = max( source2(:,:) ); % Max
+    %  Createa transparent polygon to encapsulate each set of spikes
+    %  Because defining a patch has to be done point-by-point in order, it is
+    %  like drawing a circle, the x axis needs to go 1 -> 32 then back 32 -> 1.
+    %  The path starts with the lower bound, then needs a reversed upper bound.
+    Max1r = fliplr(Max1);      % Reverse order of Max vector
+    Max2r = fliplr(Max2);      % Reverse order of Max Vector
+    x = [1:32,32:-1:1];        % create x array (1->32->1). Same for both.
+    y1 = [Min1,Max1r];         % create spike 1 array (lower then upper bounds)
+    y2 = [Min2,Max2r];         % create spike 2 array (lower then upper bounds)
+    % plot patches
+    patch(x,y1,'b')            % fill area defined x and y array in blue
+    patch(x,y2,'r')            % fill area defined x and y array in red
+    alpha(0.1)                % set both patches to transparent
+    %  Overlay Median for each spike
+    plot(1:32,Mu1,'b--',1:32,Mu2,'r--', 'lineWidth',2)  % Median for each
+    %  Plot formatting
+    title('(a) Differentiation between two spikes (0.8ms)');
+    xlabel('Time (ms)');
+    ylabel('Amplitude (microVolts)');
+    set(gca,'XTick', [0:4:32])          % from reduce 32 ticks by factor of 4
+    set(gca,'XTickLabel', [0:0.1:0.8])  % label from 0 to 0.8ms (0.8ms/(32/4))
+    legend('Range of Spike 1','Range of Spike2', ...
+        'Median Spike 1', 'Median Spike 2','Location','southeast')
+    hold off
+
+
+subplot(2,2,2)
+    % Difference between 3 spikes
+    hold on
+    %  Obtain statistics (std, median, min, and max)
+    Mu1 = mean(source0(idx==1,:)); Mu2 = mean(source0(idx==2,:)); Mu3 = mean( source0(idx==3,:) ); 
+    Min1 = min(source0(idx==1,:)); Min2 = min(source0(idx==2,:)); Min3 = min( source0(idx==3,:) ); 
+    Max1 = max(source0(idx==1,:)); Max2 = max(source0(idx==2,:)); Max3 = max( source0(idx==3,:) ); 
+    %  Create a transparent polygon to encapsulate each set of spikes
+    Max1r = fliplr(Max1);  Max2r = fliplr(Max2);  Max3r = fliplr(Max3);
+    y1 = [Min1,Max1r];     y2 = [Min2,Max2r];     y3 = [Min3,Max3r]; 
+    x = [1:32,32:-1:1];        % create x array (1->32->1). Same for Three.
+    patch(x,y2,'b')            % fill area defined x and y array in blue
+    patch(x,y1,'r')            % fill area defined x and y array in red
+    patch(x,y3,'g')            % fill area defined x and y array in green
+    alpha(0.1)                 % set both patches to transparent
+    %  Overlay Median for each spike
+    plot(0,0,'k--');           % add dashed line to use in legend 
+    plot(1:32,Mu2,'b--',1:32,Mu1,'r--',1:32,Mu3,'g--', 'lineWidth',2) 
+    %  Plot formatting
+    title(' (b) Differentiation between three spikes (0.8ms)');
+    xlabel('Time (ms)');
+    ylabel('Amplitude (microVolts)');
+    set(gca,'XTick', [0:4:32])          % from reduce 32 ticks by factor of 4
+    set(gca,'XTickLabel', [0:0.1:0.8])  % label from 0 to 0.8ms (0.8ms/(32/4))
+    legend('Range of Spike 1','Range of Spike2','Range of Spike3', ...
+        'Median per Spike','Location','southeast')
+    hold off
+
+subplot(2,2,3)
+    %  Figure 1 - Plot spike waveforms based on clustering
+    %  Assign a color to each coluster of waveforms; Resample to reduce to
+    %  every 100th  waveform. (64 waveforms vs 6400)
+    idxR = idx(1:100:end);
+    source0R = source0(1:100:end,:);
+    %  Plot Figure
+    hold on
+    plot(1:32,source0R(idxR==1,:),'r-');
+    plot(1:32,source0R(idxR==2,:),'b-');
+    plot(1:32,source0R(idxR==3,:),'g-');
+    %  Plot Formatting
+    title('(c) Clustered Spike Waveforms (every 50th)');
+    xlabel('Time (ms)');
+    ylabel('Amplitude (microVolts)'); 
+    set(gca,'XTick', [0:4:32]); set(gca,'XTickLabel', [0:0.1:0.8]);
+    hold off
+
+subplot(2,2,4)
+    % Mean Plots of each spike (0.8ms)
+    % plot three medians
+    hold on
+    plot(1:32,Mu2,'k-');text(18,Mu1(20)+10, 'Average Spike 2');
+    plot(1:32,Mu1,'k-');text(14,Mu2(10),    'Average Spike 1');
+    plot(1:32,Mu3,'k-');text(24,Mu3(26)-15, 'Average Spike 3');    
+    hold off    
+    %  Plot formatting
+    title('(d) Differentiation between three spikes (0.8ms)');
+    xlabel('Time (ms)');
+    ylabel('Amplitude (microVolts)');
+    set(gca,'XTick', [0:4:32]); set(gca,'XTickLabel', [0:0.1:0.8]);
+
+    
+%% Figure 4 - Elipses drawn around data by standard deviation
+%  Eigenvector projection onto data modified from:
+%  https://stackoverflow.com/questions/3417028/ellipse-around-the-data-in-matlab
+
+%  scatter plot (plot3 produces same result but has more control)
+hold on
+gscatter(X(:,1), X(:,2), idx)
+for k=1:3
+    % indices of points in this group
+    idxG = ( idx == k );
+    % Define mean, and subtract from data
+    Mu = mean( X(idxG,:) );
+    X0 = minus( X(idxG,:), Mu );
+
+    % eigen decomposition [sorted by eigen values]
+    STD = 2;                    % 2 standard deviations
+    conf = 2*normcdf(STD)-1;    % covers around 95% of population
+    scale = chi2inv(conf,2);    % inverse chi-squared with dof=#dimensions
+    %eigen vectors
+    Cov = cov(X0) * scale;
+    [V D] = eig(Cov);
+    % project on circle
+    t = linspace(0,2*pi,100);
+    e = [cos(t) ; sin(t)];      % unit circle
+    VV = V*sqrt(D);             % scale eigenvectors
+    e = plus( VV*e, Mu' );      % project circle back to orig space
+    % plot cov and major/minor axes
+    plot(e(1,:), e(2,:), 'Color','k', 'lineWidth', 2);
+    quiver(Mu(1),Mu(2), VV(1,1),VV(2,1), 'Color','k','lineWidth',2);
+    quiver(Mu(1),Mu(2), VV(1,2),VV(2,2), 'Color','k','lineWidth',2);
+end
+%  plot formatting
+title('Clustered scatterplot with a standard deviation of 2 ');
+xlabel('1st Principal Component');
+ylabel('2nd Principal Component');
+legend off
+hold off
