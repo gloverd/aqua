@@ -1,245 +1,135 @@
-<!DOCTYPE html>	
-<html lang="en">	
-<head>	
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">	
-<meta charset="utf-8">	
-<title>AQUA</title>	
-<meta name="generator" content="Bootply" />	
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">	
-	
-<!--[if lt IE 9]>	
-<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>	
-<![endif]-->	
-<link rel="shortcut icon" href="/bootstrap/img/favicon.ico">	
-<link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">	
-<link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">	
-<link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">	
-	
-<!-- CSS-->	
-<style type="text/css">	
-.badge { background-color: #e7e7e7;}	
-li:hover .badge {background-color:#ffffff; color:#e7e7e7;}	
-body {padding-top:50px;}	
-#masthead {min-height:150px;}	
-#masthead h1 {font-size: 30px;line-height: 1;padding-top:20px;}	
-#masthead .well {margin-top:8%;}	
-#sidebar li.active {border:0 #eee solid;border-right-width:15px;}	
-%REGCOL% p {height: 40px;}	
-.navbar-bright {background-color:#111155;color:#fff;}	
-.affix-top,.affix{position: static;}	
-@media screen and (min-width: 768px) {	
-#masthead h1 {font-size: 50px;}	
-}	
-@media screen and (max-width: 400px) {	
-%MOBILECOL% {height:100px;margin-bottom:30px;}	
-}	
-@media (min-width: 979px) {	
-#sidebar.affix-top {position: static;margin-top:30px;width:228px;}	
-#sidebar.affix {position: fixed;top:70px;width:228px;}	
-}	
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MDL-Static Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css">
+    <link rel="stylesheet" href="styles.css" />
 
+<!-- 
+font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif;
+-->
 
-img {border-radius: 3px;width:100%;max-height: 120px; min-height:120px;}	
-.col-md-3 {height: 140px;margin-bottom: 25px;}	
-	
- /* CSS only to highlight col-* */
- .row [class*='col-']:not(.hid) {
-      background-clip: content-box;
-      min-height: 20px;
-}
+</head>
 
-.btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
-}
-
-.btn-primary.btn-outline {
-    color: #428bca;
-}
-
-.btn-danger.btn-outline {
-    color: #428bca;
-}
-
-
-.btn-outline:hover {
-    color: #eeeeee;
-}
-
-.sharp {
-  border-radius:0;
-}
-
-html, body{height:100%; margin:0;padding:0}
- 
-.container-fluid{
-  height:100%;
-  display:table;
-  width: 100%;
-  padding: 0;
-}
- 
-.row-fluid {height: 100%; display:table-cell; vertical-align: middle;}
- 
-.navbar-default .navbar-nav>li>a {
-    color: #428bca;
-}
-
-.navbar-default {
-    background-color:#ffffff;
-    border-color: #357EBD;
-}
-
-.btn-outline {
-    min-width: 350px;
-    min-height: 130px;
-}	
-
-.centering {
-  float:none;
-  margin:0 auto;
-}
-
-@media screen and (max-width: 500px) {
-	h2 {font-size: 18px;}
-	.btn-outline {min-width: 100px;    width: 100%;min-height:100px;}
-	#masthead {    min-height: 75px;}
-}
-
-</style>	
-</head>	
-	
-<!-- HTML  -->	
-<body  >	
-	
-<nav class="navbar navbar-default navbar-fixed-top" role="banner">	
-<div class="container">	
-<div class="navbar-header">	
-<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">	
-<span class="sr-only">Toggle navigation</span>	
-<span class="icon-bar"></span>	
-<span class="icon-bar"></span>	
-<span class="icon-bar"></span>	
-</button>	
-<a href="#" class="navbar-brand" style="color:black;font-weight:bold !important;">aqua.glover.in</a>	
-</div>	
-<nav class="collapse navbar-collapse" role="navigation">	
-      <ul class="nav navbar-nav">	
-        <li ><a href="http://aqua.glover.in/aqua-acr/">AQUA-ACR</a></li>	
-        <li ><a href="http://aqua.glover.in/aqua-btr/">AQUA-BTR</a></li>	
-        <li ><a href="http://aqua.glover.in/aqua-acr-skl/">AQUA-ACR-SKL</a></li>	
-        <li ><a href="http://aqua.glover.in/aqua-btr-skl/">AQUA-BTR-SKL</a></li>	
-      </ul>	
-    </nav>	
-    	
-  </div>	
-</nav>	
-	
-<div id="masthead">  	
-  <div class="container">	
-      <div class="row">	
-        <div class="col-md-7">	
-        <br />
-        </div>	
-      </div>	
-  </div><!--/container-->	
-</div><!--/masthead-->	
-	
-<!--main-->	
-<div class="container">	
-<div class="row">	
-
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="centering text-center">
-
-            <div class="container">
-                <h2>Welcome to aqua.glover.in</h2>
-                <div class="row vertical-align">
-                    <div class="col-xs-6" style="text-align:right;">
-                        <a class="btn btn-primary btn-outline sharp" href="http://aqua.glover.in/aqua-acr/">
-                            <h2>AQUA-ACR</h2>
-                            <p>Atlantic Coral Reef</p>
-                        </a>
-                    </div>
-
-                    <div class="col-xs-6" style="text-align:left;">
-                        <a class="btn btn-primary btn-outline sharp" href="http://aqua.glover.in/aqua-btr/">
-                            <h2>AQUA-BTR</h2>
-                            <p>Blacktip Reef</p>
-                        </a>
-                    </div>
-                </div>
-
-                <br>
-
-                <div class="row">
-                    <div class="col-xs-6" style="text-align:right;">
-                        <a class="btn btn-primary btn-outline sharp" href="http://aqua.glover.in/aqua-acr-skl/">
-                            <h2>AQUA-ACR-SKL</h2>
-                            <p>ACR Learning</p>
-                        </a>
-                    </div>
-
-                    <div class="col-xs-6" style="text-align:left;">
-                        <a class="btn btn-danger btn-outline sharp" href="http://aqua.glover.in/aqua-btr-skl/">
-                            <h2>AQUA-BTR-SKL</h2>
-                            <p>Blacktip Reef Learning</p>
-                        </a>
-                    </div>
-                </div>
-                
-                <br>
-                
-                <div class="row">
-                    <div class="col-xs-6" style="text-align:right;">
-                        <a class="btn btn-primary btn-outline sharp" href="http://aqua.glover.in/aqua-acr/index_large.html">
-                            <h2>AQUA-ACR-LRG</h2>
-                            <p>ACR Large</p>
-                        </a>
-                    </div>
-                </div>
-                
-                  <br>
-                
-                <div class="row">
-                    <div class="col-xs-6" style="text-align:right;">
-                        <a class="btn btn-primary btn-outline sharp" href="http://aqua.glover.in/aqua-acr/index_large_quiz.html">
-                            <h2>AQUA-ACR-QUIZ</h2>
-                            <p>ACR Quiz</p>
-                        </a>
-                    </div>
-                </div>
-                
-
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <span class="mdl-layout__title">
+                        aqua.glover.in
+                    </span>
+                </span>
             </div>
+        </header>
 
-        </div>
+
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+
+                <style>                    
+                    .mdl-shadow--4dp{
+                       box-shadow: 0 4px 5px rgba(0,0,0,0.12), 0 1px 10px rgba(0,0,0,0.24), 0 2px 20px rgba(0,0,0,0.24);
+                       transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                    }    
+                    .mdl-shadow--4dp:hover {
+                       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22), 0 2px 20px rgba(0,0,0,.24);
+                    }
+                </style>
+                
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">AQUA-ACR</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Atlantic Coral Reef.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " href="http://aqua.glover.in/aqua-acr/" data-upgraded=",MaterialButton,MaterialRipple">Visit<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 231.938px; height: 231.938px; transform: translate(-50%, -50%) translate(63px, 16px);"></span></span></a>
+                    </div>
+                </div>
+
+                
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">AQUA-BTR</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Blacktip Reef.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " href="http://aqua.glover.in/aqua-btr/" data-upgraded=",MaterialButton,MaterialRipple">Read more<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 231.938px; height: 231.938px; transform: translate(-50%, -50%) translate(63px, 16px);"></span></span></a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">AQUA-ACR-SKL</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                       ACR Identification page.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " href="http://aqua.glover.in/aqua-acr-skl/" data-upgraded=",MaterialButton,MaterialRipple">Read more<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 231.938px; height: 231.938px; transform: translate(-50%, -50%) translate(63px, 16px);"></span></span></a>
+                    </div>
+                </div>
+                
+                
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">AQUA-ACR-QUIZ</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Quiz your knowledge of ACR Fish
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " href="http://aqua.glover.in/aqua-acr/index_large_quiz.html" data-upgraded=",MaterialButton,MaterialRipple">Read more<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 231.938px; height: 231.938px; transform: translate(-50%, -50%) translate(63px, 16px);"></span></span></a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">AQUA-ACR-LRG</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        Larger view of ACR Fish.
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored " href="http://aqua.glover.in/aqua-acr/index_large.html" data-upgraded=",MaterialButton,MaterialRipple">Read more<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 231.938px; height: 231.938px; transform: translate(-50%, -50%) translate(63px, 16px);"></span></span></a>
+                    </div>
+                </div>
+
+
+                
+                
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">aqua.glover.in</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">David Glover</a></li>
+                        <li><a href="http://aqua.org/">aqua.org</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
     </div>
-</div>
-<!-- /bootstrap grid example -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
 
-
-</div><!--/row-->	
-</div><!--/container-->	
-	
-<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
-<script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>	
-<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>	
-	
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-79923757-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-	
-    </body>	
-</html>	
+</html>
