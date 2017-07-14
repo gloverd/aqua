@@ -7,3 +7,4 @@ Latest version can be found online here, for the [splash.html](http://aqua.glove
 ## Things to implement:
 * https://getmdl.io/components/index.html#cards-section
 * https://material.io/icons/
+* https://codepen.io/kybarg/pen/rVvgag
