@@ -29,7 +29,7 @@ var count = 0;
 
 handleImage('magri');
 
-var radius = 20;
+var radius = 50;
 // 10 is still good
 // 20 is medium resolution
 // 50 is pretty blocky
@@ -37,7 +37,7 @@ var radius = 20;
 function createPiece() {
 	var group = new Group();
 	// define a hexagon as a 6 sided polygon with radius ${radius}
-	var hexagon = new Path.RegularPolygon(view.center, 6, 15);
+	var hexagon = new Path.RegularPolygon(view.center, 6, 50);
 	hexagon.fillColor = 'gray';
 	group.addChild(hexagon);
 	for (var i = 0; i < 2; i++) {
