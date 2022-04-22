@@ -29,11 +29,11 @@ var count = 0;
 
 handleImage('magri');
 
-
+var radius = 20;
 
 function createPiece() {
 	var group = new Group();
-	var hexagon = new Path.RegularPolygon(view.center, 6, 50);
+	var hexagon = new Path.RegularPolygon(view.center, 6, radius);
 	hexagon.fillColor = 'gray';
 	group.addChild(hexagon);
 	for (var i = 0; i < 2; i++) {
