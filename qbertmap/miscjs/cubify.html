@@ -37,7 +37,7 @@ var radius = 50;
 function createPiece() {
 	var group = new Group();
 	// define a hexagon as a 6 sided polygon with radius ${radius}
-	var hexagon = new Path.RegularPolygon(view.center, 6, 50);
+	var hexagon = new Path.RegularPolygon(view.center, 6, 6);
 	hexagon.fillColor = 'gray';
 	group.addChild(hexagon);
 	for (var i = 0; i < 2; i++) {
