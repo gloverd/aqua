@@ -19,6 +19,19 @@
 <!-- CSS  -->	
 <style type="text/css">	
 	
+	#score-tracker {
+	position: fixed;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	font-weight: bold;
+	}
+	
+	#correct-count {
+	color: green;
+	}
+
 
 	.badge { background-color: #e7e7e7;}	
 	li:hover .badge {background-color:#ffffff; color:#e7e7e7;}	
@@ -179,6 +192,9 @@
         <p>Select settings from the left then begin</p>	
 	<input type="button" value="Start" name="startButton" />  
         <hr>	
+
+	<div id="score-tracker">Score: <span id="correct-count">0</span>/<span id="total-count">0</span></div>
+
 
 
 <div id="answerOptions" style="display:none;">
@@ -433,6 +449,36 @@ $('a[href*=#]:not([href=#])').click(function() {
 </script>	
 
 
+
+<script type='text/javascript'>//<![CDATA[
+let correctCount = 0;
+let totalCount = 0;
+let currentFishCorrect = false;
+
+function updateScoreTracker() {
+    document.getElementById('correct-count').textContent = correctCount;
+    document.getElementById('total-count').textContent = totalCount;
+}
+
+function handleAnswer(isCorrect) {
+    if (!currentFishCorrect) {
+        totalCount++;
+        if (isCorrect) {
+            correctCount++;
+            currentFishCorrect = true;
+        }
+        updateScoreTracker();
+    }
+}
+
+// Reset currentFishCorrect when a new fish is loaded
+function loadNewFish() {
+    currentFishCorrect = false;
+    // Add logic to load the next fish here
+}
+
+</script>
+	
 <script type='text/javascript'>//<![CDATA[
 
 $(function () {
